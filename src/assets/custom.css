@@ -36,3 +36,5 @@ html {
     font-size: 80%;
   }
   
+  .banner{    border-top: 1px solid green;
+    border-bottom: 2px solid green;}
