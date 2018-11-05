@@ -5,8 +5,8 @@
 
 export const environment = {
     production: false,
-    api_url: 'http://localhost:8000/assets/mock',
-    off_report_path: '/reports/off-report.json',
-    login_path: '/users/login.json',
-    login_auth_path: '/users/user.json'
+    api_url: 'https://conduit.productionready.io/api',
+    off_report_path: '/reports/off-report',
+    login_path: '/users/login',
+    login_auth_path: '/users/user'
 };
