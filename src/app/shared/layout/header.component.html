@@ -4,9 +4,11 @@
           <div class="row">
         <div class="headertop">
               <div class="col-md-4 col-sm-4 col-xs-4">
-            <div class="logo"> <a href="index.html" target="_parent"><img src="https://www.e-visaindia.com/images/logo-4.png" alt="E-Visa India" title="E-Visa India" class="img-responsive" /></a> 
+            <div class="logo"> <a routerLink="/"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }" target="_parent"><img src="https://www.e-visaindia.com/images/logo-4.png" alt="E-Visa India" title="E-Visa India" class="img-responsive" /></a> 
           
-			</div>
+			  </div>
 			
           </div>
           <div class="col-md-4 col-sm-4 col-xs-4">
@@ -21,14 +23,32 @@
              
               <nav class="clearfix">
             <ul class="clearfix">
-            <li class="first"><a href="index.html" class="active">Home</a></li>
-		 <li class="first1"><a href="etv/info1.html" target="_parent" title="Urgent Visa>Apply Urgent Visa">Apply Urgent Visa</a></li>
-          <li><a href="document.html" target="_parent" title="Document Requirement">Document Requirement</a></li>
-          <li><a href="instruction1.html" target="_parent" title="Instructions for Applicant">Instructions</a></li>
-		  <li><a href="term.html" title="Terms & Conditions">Terms & Conditions</a></li>
-          <li><a href="privacy.html" title="Privacy-Policy">Privacy-Policy</a></li>
-	      <li><a href="about.html" title="About-Us">About-Us</a></li>
-          <li><a href="contact.html" title="Contact-Us">Contact Us</a></li>
+            <li class="first"><a class="active" routerLink="/"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            </li>
+     
+            <li class="first1"><a routerLink="/applyvisa"
+              routerLinkActive="active"  title="Urgent Visa>Apply Urgent Visa">Apply Urgent Visa</a></li>
+         
+            <li><a routerLink="/document"
+              routerLinkActive="active"  title="Document Requirement">Document Requirement</a></li>
+          
+            <li><a routerLink="/instruction"
+              routerLinkActive="active"   title="Instructions for Applicant">Instructions</a></li>
+      
+          
+           <li><a routerLink="/term"
+            routerLinkActive="active" title="Terms & Conditions">Terms & Conditions</a></li>
+          
+           <li><a routerLink="/privacy"
+            routerLinkActive="active"  title="Privacy-Policy">Privacy-Policy</a></li>
+        
+           <li><a routerLink="/aboutus"
+            routerLinkActive="active"  title="About-Us">About-Us</a></li>
+          
+           <li><a routerLink="/contactus"
+            routerLinkActive="active"  title="Contact-Us">Contact Us</a></li>
                  
                 </ul>
           </nav>
@@ -41,84 +61,5 @@
 	<img src="https://www.e-visaindia.com/img/goldentrianglecover2.jpg" alt="E-Visa India" border="0" class="img-responsive" >
 	</div>
     
-    <!--------------------------------------------------------end slider---------------------------------------------> 
   </header>
-  
-<header>
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      
-
-      <li class="nav-item">
-        <a class="nav-link"
-          routerLink="/"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }">
-          Home
-        </a>
-      </li>
-        
-      <li class="nav-item">
-        <a class="nav-link"
-           routerLink="/applyvisa"
-           routerLinkActive="active">
-          &nbsp;Apply Urgent Visa
-        </a>
-      </li>
-        <li class="nav-item">
-            <a class="nav-link"
-               routerLink="/document"
-               routerLinkActive="active">
-                &nbsp;Document Required
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link"
-               routerLink="/instruction"
-               routerLinkActive="active">
-                &nbsp;Instructions
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"
-               routerLink="/term"
-               routerLinkActive="active">
-                &nbsp;Terms & Conditions
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"
-               routerLink="/privacy"
-               routerLinkActive="active">
-                &nbsp;Privacy-Policy
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"
-               routerLink="/aboutus"
-               routerLinkActive="active">
-                &nbsp;About-Us
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"
-               routerLink="/contactus"
-               routerLinkActive="active">
-                &nbsp;Contact-Us
-            </a>
-          </li>
-    </ul>
-  </div>
-</nav>
-</div>
-</div>
-</div>
-</header>
-<div class="clearfix">&nbsp;</div>
+      <!--------------------------------------------------------end slider---------------------------------------------> 
