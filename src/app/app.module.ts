@@ -26,7 +26,8 @@ import {
     JwtService,
     SharedModule,
     UserService,
-    ReportService
+    ReportService,
+    SidebarComponent
 } from './shared';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: false});
@@ -35,7 +36,8 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: fals
     declarations: [
         AppComponent,
         FooterComponent,
-        HeaderComponent
+        HeaderComponent,
+        SidebarComponent
     ],
     exports: [],
     imports: [
