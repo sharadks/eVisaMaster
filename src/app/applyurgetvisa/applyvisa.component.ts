@@ -4,7 +4,8 @@ import {UserService } from '../shared';
 
 @Component({
   selector: 'applyvisa-page',
-  templateUrl: './applyvisa.html'
+  templateUrl: './applyvisa.html',
+  styleUrls: ['./applyvisa.css']
 })
 export class ApplyVisaComponent implements OnInit {
   constructor(
