@@ -19,13 +19,27 @@
                             <div class="left_bar_inner">
 								<h3>Indian Visa Information</h3>
 								<ul>
-									<li style="margin-top: 38px;"><a href="etv/info1.php" target="_parent" title="Urgent Visa>Apply Urgent Visa">e-Visa India</a></li>
-									<li><a href="instruction1.php" target="_parent" title="Instructions for Applicant">Instructions for Applicant</a></li>
-									<li><a href="document.php" target="_parent" title="Document Requirement">Document Requirement</a></li>
-                                    <li><a href="privacy.php" title="Privacy-Policy">Privacy Policy</a></li>
-                                    <li><a href="term.php" title="Terms &amp; Conditions">Terms Conditions</a></li>
-                                    <li><a href="disclaimer1.php" title="Disclaimer">*Disclaimer</a></li>
-                                    <li><a href="about.php" title="About-Us">About Us</a></li>
+									<li style="margin-top: 38px;"><a routerLink="/applyvisa"
+                                        routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{ exact: true }" title="Urgent Visa>Apply Urgent Visa">e-Visa India</a></li>
+									<li><a routerLink="/instruction"
+                                        routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{ exact: true }" title="Instructions for Applicant">Instructions for Applicant</a></li>
+									<li><a routerLink="/document"
+                                        routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{ exact: true }" title="Document Requirement">Document Requirement</a></li>
+                                    <li><a routerLink="/privacy"
+                                        routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{ exact: true }" title="Privacy-Policy">Privacy Policy</a></li>
+                                    <li><a routerLink="/term"
+                                        routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{ exact: true }" title="Terms &amp; Conditions">Terms Conditions</a></li>
+                                    <li><a routerLink="/disclaimer"
+                                        routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{ exact: true }" title="Disclaimer">*Disclaimer</a></li>
+                                    <li><a routerLink="/aboutus"
+                                        routerLinkActive="active"
+                                        [routerLinkActiveOptions]="{ exact: true }"  title="About-Us">About Us</a></li>
 									<!--<li><a href="#">FAQs-Payment Related</a></li>-->
 								</ul>
 							</div>
