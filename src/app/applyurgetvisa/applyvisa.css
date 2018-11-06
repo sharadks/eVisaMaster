@@ -816,3 +816,7 @@ ul.errorMessage li{
 }
 
 .error1{font-size:12px;}
+.text_notuploaded_class {
+    color: #CE351A;
+    font-weight: bold;
+}
