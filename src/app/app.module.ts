@@ -12,6 +12,8 @@ import {DocumentRequiredModule} from './documentrequired/document.module';
 import {InstructionModule} from './instructions/instruction.module';
 import {PrivacyModule} from './privacypolicy/privacy.module';
 import {TermModule} from './termcondition/term.module';
+import {DisclaimerModule} from './disclaimer/disclaimer.module';
+import {SitemapModule} from './sitemap/sitemap.module';
 
 
 import {LogoutModule} from './logout/logout.module';
@@ -57,7 +59,9 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: fals
         DocumentRequiredModule,
         InstructionModule,
         PrivacyModule,
-        TermModule
+        TermModule,
+        DisclaimerModule,
+        SitemapModule
     ],
     providers: [
         ApiService,
