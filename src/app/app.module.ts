@@ -27,7 +27,8 @@ import {
     SharedModule,
     UserService,
     ReportService,
-    SidebarComponent
+    SidebarComponent,
+	BottomComponent
 } from './shared';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: false});
@@ -37,7 +38,8 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: fals
         AppComponent,
         FooterComponent,
         HeaderComponent,
-        SidebarComponent
+        SidebarComponent,
+		BottomComponent
     ],
     exports: [],
     imports: [
