@@ -16,4 +16,8 @@ export class UploadPhotographComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToNext (){
+    this.router.navigate(["applyvisa/uploaddocument"]);
+  }
+
 }

@@ -16,4 +16,7 @@ export class UploadDocumentComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToNext (){
+    this.router.navigate(["applyvisa/confirm"]);
+  }
 }

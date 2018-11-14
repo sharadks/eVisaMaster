@@ -16,4 +16,7 @@ export class VisaSoughtComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToNext (){
+    this.router.navigate(["applyvisa/uploadphoto"]);
+  }
 }

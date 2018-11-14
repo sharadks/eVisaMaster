@@ -15,5 +15,8 @@ export class GeneralDetailsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  goToNext (){
+    this.router.navigate(["applyvisa/addressdetails"]);
+  }
 }
