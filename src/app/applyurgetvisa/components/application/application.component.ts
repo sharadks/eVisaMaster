@@ -16,4 +16,8 @@ export class ApplicationComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToNext (){
+    this.router.navigate(["applyvisa/generaldetails"]);
+  }
+
 }
