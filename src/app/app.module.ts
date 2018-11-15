@@ -2,7 +2,6 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import {AppComponent} from './app.component';
-import {AuthModule} from './auth/auth.module';
 import {HomeModule} from './home/home.module';
 
 import {AboutUsModule} from './aboutus/aboutus.module';
@@ -46,7 +45,6 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: fals
     exports: [],
     imports: [
         BrowserModule,
-        AuthModule,
         HomeModule,
         rootRouting,
         SharedModule,
