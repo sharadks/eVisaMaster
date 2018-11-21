@@ -452,8 +452,9 @@ ul.instructions_ul li{
 }
 
 .form_container{  
-    border:1px solid rgba(117, 167, 214,0.2);   
+      
 }
+.global-form{border:1px solid rgba(117, 167, 214,0.2); }
 .row{
 	margin-top: 8px;
 	display:block;
