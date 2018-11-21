@@ -27,9 +27,9 @@ header{width: 100%; float: left; border-bottom: #fff solid 2px;}
 .logo{float:left; max-width:208px;}
 .logo img{width:100%}
 .topCont{width:300px; float:right; margin:25px 0px 0px 0px}
-.topContInId,.topContInPh{width:100%; padding-left:40px; margin-bottom:5px; background:url(../images/msg.jpg) center left no-repeat; font-size:16px}
+.topContInId,.topContInPh{width:100%; padding-left:40px; margin-bottom:5px; background:url(../../assets/images/msg.jpg) center left no-repeat; font-size:16px}
 .topContInId a{color:#0082dc;}
-.topContInPh{background:url(../images/ind.jpg) center left no-repeat}
+.topContInPh{background:url(../../assets/images/ind.jpg) center left no-repeat}
 .banner{width: 100%; height:auto; float:left}
 .banner img{width:100%;}
 .nav{width:100%; margin:10px 0px 10px 35px;}
@@ -46,15 +46,15 @@ header{width: 100%; float: left; border-bottom: #fff solid 2px;}
 .leftWrap { width: 250px; float: left; border: 1px solid #ccc;}
 .leftWrap h3{width: 100%; display:block; float: left; margin-bottm: 10px; background: #3f4fb0; color: #fff; text-transform: uppercase; padding: 12px 12px; font-size: 16px; text-align: left;}
 .leftWrap ul.leftLink{clear:both}
-.leftWrap ul.leftLink li {font-size: 15px; font-family: Verdana, Geneva, sans-serif; border-bottom: 1px solid #ccc; padding: 12px 15px 12px 33px; text-align: left; background: url(../images/arrow.png) no-repeat left; background-position-x: left; background-position-y: center; background-position: 8px 15px; cursor: pointer;}
+.leftWrap ul.leftLink li {font-size: 15px; font-family: Verdana, Geneva, sans-serif; border-bottom: 1px solid #ccc; padding: 12px 15px 12px 33px; text-align: left; background: url(../../assets/images/arrow.png) no-repeat left; background-position-x: left; background-position-y: center; background-position: 8px 15px; cursor: pointer;}
 .leftWrap ul.leftLink li a{color:#303030}
 
 ul.contactLi {clear:both; width:100%}
 ul.contactLi li {font-size: 14px; color: #333; padding-left: 45px; border-bottom: 1px solid #ccc; line-height:44px}
-ul.contactLi li.f1 {background:url(../images/ind.jpg) 10px center no-repeat;}
-ul.contactLi li.f2 {background:url(../images/msg.jpg) 10px center no-repeat;}
-ul.contactLi li.f3 {background:url(../images/usa.jpg) 10px center no-repeat;}
-ul.contactLi li.f4 {background:url(../images/uk.jpg) 10px center no-repeat;}
+ul.contactLi li.f1 {background:url(../../assets/images/ind.jpg) 10px center no-repeat;}
+ul.contactLi li.f2 {background:url(../../assets/images/msg.jpg) 10px center no-repeat;}
+ul.contactLi li.f3 {background:url(../../assets/images/usa.jpg) 10px center no-repeat;}
+ul.contactLi li.f4 {background:url(../../assets/images/uk.jpg) 10px center no-repeat;}
 
 .payWrap{font-size:15px;color:#ad1a46;font-weight: bold; padding:15px 0 15px 15px; width:100%; clear:both; line-height:20px; border-bottom: 1px solid #ccc; word-wrap:break-word}
 .payWrap strong{padding-right:20px;}
@@ -76,16 +76,16 @@ ul.eliList li{list-style-type: decimal; padding-bottom: 10px;}
 .cartMain span{position: absolute; top: -17px; left: 96px; color: #fff; font-size: 10px; width: 36px; height: 36px; line-height: 18px; padding: 10px 0px 0px 0px; background: #e65b16; border-radius: 36px; -moz-border-radius: 36px; -webkit-border-radius: 36px; text-align:center}
 .cartIn{ position: relative; width:100%;}
 .cartImg1,.cartImg2,.cartImg3,.cartImg4{clear: both; width: 130px; height:130px; margin: 0 auto; border: 5px solid #e65b16; border-radius: 130px; -moz-border-radius: 130px; -webkit-border-radius: 130px; overflow: hidden;}
-.cartImg1{ background:url(../images/1.png) center center no-repeat;}
-.cartImg2{ background:url(../images/2.png) center center no-repeat;}
-.cartImg3{ background:url(../images/3.png) center center no-repeat;}
-.cartImg4{ background:url(../images/4.png) center center no-repeat;}
+.cartImg1{ background:url(../../assets/images/1.png) center center no-repeat;}
+.cartImg2{ background:url(../../assets/images/2.png) center center no-repeat;}
+.cartImg3{ background:url(../../assets/images/3.png) center center no-repeat;}
+.cartImg4{ background:url(../../assets/images/4.png) center center no-repeat;}
 
 .cartLink{ color: #e65b16; font-size: 20px; font-weight: bold; text-align: center; cursor: pointer; display:block; padding:5px 0;}
 .cartMain p{font-size: 14px; text-align: center; line-height: 20px;}
 
 footer{width: 100%; float: left; background: #ebebeb; padding: 20px 0px; border-top: #0082dc solid 2px;}
-.verify{background:url(../images/footerTop.gif) 0 0 no-repeat; height:32px; width:131px}
+.verify{background:url(../../assets/images/footerTop.gif) 0 0 no-repeat; height:32px; width:131px}
 .footerLeft { padding: 10px 0 0 0; font-size: 14px; color: #000; line-height: 20px; float: left; text-align: justify; max-width:625px}
 .footerLeft span{color:#ff1300}
 .footerPay { float: left; margin-left: 20px;}
@@ -234,7 +234,7 @@ footer{padding-top:10px;}
 .footerLeft{padding-bottom:10px}
 
 .leftWrap h3{font-size:16px; padding:8px}
-.leftWrap ul.leftLink li{padding:6px 15px 6px 29px; font-size:14px; background: url(../images/left-arrow.png) no-repeat 5px center; width:50%; float:left}
+.leftWrap ul.leftLink li{padding:6px 15px 6px 29px; font-size:14px; background: url(../../assets/images/left-arrow.png) no-repeat 5px center; width:50%; float:left}
 ul.contactLi li{line-height:34px; width:100%; float:left}
 .payWrap1 p img{}
 
