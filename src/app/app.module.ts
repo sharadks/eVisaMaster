@@ -11,7 +11,7 @@ import {DocumentRequiredModule} from './documentrequired/document.module';
 import {InstructionModule} from './instructions/instruction.module';
 import {PrivacyModule} from './privacypolicy/privacy.module';
 import {TermModule} from './termcondition/term.module';
-import {DisclaimerModule} from './disclaimer/disclaimer.module';
+
 
 import {EvisaFeeModule} from './evisa-fee/evisa-fee.module';
 import {FaqModule} from './faq/faq.module';
@@ -62,7 +62,6 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: fals
         InstructionModule,
         PrivacyModule,
         TermModule,
-        DisclaimerModule,
         EvisaFeeModule,
         FaqModule,
         PaymentGuidleinsModule,
