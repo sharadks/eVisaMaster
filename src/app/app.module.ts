@@ -12,10 +12,15 @@ import {InstructionModule} from './instructions/instruction.module';
 import {PrivacyModule} from './privacypolicy/privacy.module';
 import {TermModule} from './termcondition/term.module';
 import {DisclaimerModule} from './disclaimer/disclaimer.module';
-import {SitemapModule} from './sitemap/sitemap.module';
+
+import {EvisaFeeModule} from './evisa-fee/evisa-fee.module';
+import {FaqModule} from './faq/faq.module';
+import {PaymentGuidleinsModule} from './payments-guidlines/payment-guidlines.module';
+import {RefundPolicyModule} from './refund-policy/refund-policy.module';
+import {ServicesModule} from './services/services.module';
+import {EligibleCountriesModule} from './eligiblecontries/eligiblecountries.module';
 
 
-import {LogoutModule} from './logout/logout.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {DataTableModule} from 'angular2-datatable';
 
@@ -49,7 +54,6 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: fals
         rootRouting,
         SharedModule,
         NgbModule.forRoot(),
-        LogoutModule,
         DataTableModule,
         AboutUsModule,
         ApplyVisaModule,
@@ -59,7 +63,14 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: fals
         PrivacyModule,
         TermModule,
         DisclaimerModule,
-        SitemapModule
+        EvisaFeeModule,
+        FaqModule,
+        PaymentGuidleinsModule,
+        RefundPolicyModule,
+        ServicesModule,
+        EligibleCountriesModule
+        
+,
     ],
     providers: [
         ApiService,

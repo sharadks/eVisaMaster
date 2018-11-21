@@ -1,0 +1,340 @@
+::-webkit-input-placeholder {color: #303030;}
+:-moz-placeholder  {color: #303030;}
+::-moz-placeholder  {color: #303030;}
+:-ms-input-placeholder  {color: #303030;}
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td
+{margin: 0;padding: 0;	border: 0;	outline: 0;	font-size: 100%;vertical-align: baseline;	background: transparent; font-family:"Century Gothic"}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {	quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}
+:focus {outline: 0;}
+ins {	text-decoration: none;}
+del {	text-decoration: line-through;}
+table {	border-collapse: collapse;	border-spacing: 0;}
+
+* { margin:0px; padding:0px;}
+html,body{ font: 'Century Gothic' Arial, Helvetica, sans-serif ; font-size:12px; color:#303030;}
+input, select, textarea{font: 'Century Gothic' Arial, Helvetica, sans-serif ; font-size:12px; color:#303030;}
+body{background-color:#ffffff;}
+a input{ outline: none;}
+img{ border:none;}
+
+/*### Global class ###*/
+.clear { clear: both; height: 0px; }
+/*### wrapper ###*/
+#wrapper{ width:100%; min-height:100%;}
+/*### maincntr ###*/
+.mainCntr { margin: 0 auto; width:1024px; }
+
+/*### header ###*/
+header { width:100%; float:left; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px ; background:#fff; height:111px; border-bottom: #b18a47 solid 2px;}
+/*### logo ###*/
+.logo{ float:left; width:539px; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px ;}
+/*### rightside ###*/
+.right_side{ width:300px; float:right;margin:25px 0px 0px 0px; }
+
+/*### banner  ###*/
+.banner{ float:left; margin:0px 0px 0px 0px; width:100%; position:relative;height:269px; border-bottom:#b18a47 solid 2px}
+.banner_bg{ position:absolute; width:100%; height:269px; z-index:1; }
+.banner_bg img{ width:100%; height:269px;}
+
+/*### button_banner_bottom  ###*/
+.bottom_btn{ width:100%; float:left; margin:10px 0px 0px 0px; }
+.frt_bt{ width:194px; height:51px; float:left; background:url(../images/apply_online_ng.png) no-repeat; margin:0px 0px 0px 14px;cursor: pointer}
+.frt_bt p{ color:#fff; text-align:center; font-size:16px; padding:11px 0px 0px 0px; font-family: 'Century Gothic'; text-decoration:none;}
+.frt_bt p a{  text-decoration:none; color:#fff;cursor: pointer}
+
+.frt_bt1{ width:194px; height:51px; float:left; background:url(../images/pink_bg.png) no-repeat; margin:0px 0px 0px 10px;cursor: pointer}
+.frt_bt1 p{ color:#fff; text-align:center; font-size:16px; padding:11px 0px 0px 0px; font-family: 'Century Gothic'; text-decoration:none;}
+.frt_bt1 p a{  text-decoration:none; color:#fff;}
+
+.frt_bt2{ width:194px; height:51px; float:left; background:url(../images/fees_bg.png) no-repeat; margin:0px 0px 0px 10px;cursor: pointer}
+.frt_bt2 p{ color:#fff; text-align:center; font-size:16px; padding:18px 0px 0px 0px; font-family: 'Century Gothic'; text-decoration:none;}
+.frt_bt2 p a{  text-decoration:none; color:#fff;}
+
+.frt_bt3{ width:194px; height:51px; float:left; background:url(../images/print_vis_bg.png) no-repeat; margin:0px 0px 0px 10px;cursor: pointer}
+.frt_bt3 p{ color:#fff; text-align:center; font-size:16px; padding:18px 0px 0px 0px; font-family: 'Century Gothic'; text-decoration:none;}
+.frt_bt3 p a{  text-decoration:none; color:#fff;}
+
+.frt_bt4{ width:194px; height:51px; float:left; background:url(../images/status_bg.png) no-repeat; margin:0px 0px 0px 10px;cursor: pointer}
+.frt_bt4 p{ color:#fff; text-align:center; font-size:16px; padding:18px 0px 0px 0px; font-family: 'Century Gothic'; text-decoration:none;cursor: pointer}
+.frt_bt4 p a{  text-decoration:none; color:#fff;cursor: pointer}
+
+.frt_bt10{ width:159px; height:51px; display:inline-block; background:#e55a15 /*url(../images/apply_online_ng.png) no-repeat*/; margin:0px 0px 0px 0;cursor: pointer}
+.frt_bt10 p{ color:#fff; text-align:center; font-size:15px; font-weight:bold; padding:10px 0px 0px 0px; font-family: 'Century Gothic'; text-decoration:none;}
+.frt_bt10 p a{  text-decoration:none; color:#fff;cursor: pointer}
+
+.frt_bt11{ width:159px; height:51px; display:inline-block; background:#c25096 /*url(../images/pink_bg.png) no-repeat*/; margin:0px 0px 0px 10px;cursor: pointer}
+.frt_bt11 p{ color:#fff; text-align:center; font-size:15px; font-weight:bold; padding:10px 0px 0px 0px; font-family: 'Century Gothic'; text-decoration:none;}
+.frt_bt11 p a{  text-decoration:none; color:#fff;}
+
+.frt_bt12{ width:159px; height:51px; display:inline-block; background:#9f725c /*url(../images/fees_bg.png) no-repeat*/; margin:0px 0px 0px 10px;cursor: pointer}
+.frt_bt12 p{ color:#fff; text-align:center; font-size:15px; font-weight:bold; padding:10px 0px 0px 0px; font-family: 'Century Gothic'; text-decoration:none;}
+.frt_bt12 p a{  text-decoration:none; color:#fff;}
+
+.frt_bt13{ width:159px; height:51px; display:inline-block; background:#479871 /*url(../images/print_vis_bg.png) no-repeat*/; margin:0px 0px 0px 10px;cursor: pointer}
+.frt_bt13 p{ color:#fff; text-align:center; font-size:15px; font-weight:bold; padding:10px 0px 0px 0px; font-family: 'Century Gothic'; text-decoration:none;}
+.frt_bt13 p a{  text-decoration:none; color:#fff;}
+
+.frt_bt14{ width:159px; height:51px; display:inline-block; background:#5182de /*url(../images/status_bg.png) no-repeat*/; margin:0px 0px 0px 10px;cursor: pointer}
+.frt_bt14 p{ color:#fff; text-align:center; font-size:15px; font-weight:bold; padding:25px 0px 0px 0px; font-family: 'Century Gothic'; text-decoration:none;cursor: pointer}
+.frt_bt14 p a{  text-decoration:none; color:#fff;cursor: pointer}
+
+.frt_bt15{ width:159px; height:51px; display:inline-block; background:#e85d18 /*url(../images/apply_online_ng.png) no-repeat*/; margin:0px 0px 0px 10px;cursor: pointer}
+.frt_bt15 p{ color:#fff; text-align:center; font-size:15px; font-weight:bold; padding:25px 0px 0px 0px; font-family: 'Century Gothic'; text-decoration:none;cursor: pointer}
+.frt_bt15 p a{  text-decoration:none; color:#fff;cursor: pointer}
+
+.main_ara { width:100%; float:left; margin:15px 0px 0px 0px; }
+
+/*### left_bar  ###*/
+.left_bar{ width:250px; float:left; margin:0px 0px 0px 0;}
+/*### left_bar_inner  ###*/
+.left_bar_inner{ width:250px; float:left; margin:0px 0px 0px 0px; background:#f9f9f9; border:#ccc 1px solid;}
+.left_bar_inner h3{ width:226px; float:left; margin:0px 0px 10px 0px; background:#e55a15; color:#fff; text-transform:uppercase; font-family: "Century Gothic"; padding: 12px 12px ;font-size: 18px;text-align:left;}
+.left_bar_inner ul{ margin:41px 0px 0px 0px; list-style:none;}
+.left_bar_inner li{ margin:0px 0px 0px 0px;font-size:15px; font-family: "Century Gothic" ; border-bottom: 1px solid #ccc;  padding:12px 15px 12px 33px; text-align:left; background:url(../images/left-arrow.png) no-repeat left; background-position:8px 15px;cursor:pointer}
+.left_bar_inner li a{ text-decoration:none;color:#303030; padding:0px 5px 0px 0px ; text-align:left; display:block; line-height:18px;cursor:pointer}
+.left_bar_inner li a:hover{ color:#0082dc;}
+.left_bar_inner li .last{ border:none;}
+
+/*### right_bar ###*/
+.right_area { width:754px; float:right; margin:0px 0px 0px 0px;}
+.right_bar_inner{ width:100%; float:left; margin:0px 0px 0px 0px; background:url(../images/heading_bg.png) no-repeat center; }
+.right_bar_inner h4{font-size:19px; padding:0px 4px 0px 0px; font-family: 'Century Gothic';  color:#0082dc;text-align: center; text-transform:uppercase;}
+
+.right_area p {font-size:15px; padding:30px 0px 0px 8px; font-family: "Century Gothic" ; color:#303030; line-height:22px; text-align:justify}
+.right_area p span{font-size:17px; padding:0px 0px 0px 0px; font-family: "Century Gothic" ; color:#0082dc; font-weight:bold; font-style:italic;}
+
+/*### visa process section ###*/
+.visa_process { width:100%; float:left; margin:20px 0px 0px 0px; }
+.visa_process_inner{ width:1024px; float:left; margin:0px 0px 15px 0px; /*background:url(../images/visa_proccess_bg.png) no-repeat center;*/ }
+.visa_process_inner h4{font-size:19px; padding:0px 4px 0px 0px; font-family: 'Century Gothic';  color:#e65b16;text-align: center; text-transform:uppercase;}
+
+.creat{ float:left; margin:0px 26px 0px 0px; width:230px; text-align:center; position:relative }
+.creat:last-child{ float:right; margin:0px 0px 0px 0px; }
+.creat h2{ font-size:20px; font-weight:bold; font-family: 'Century Gothic'; color:#e65b16; text-align:center; padding:0px 0px 0px 0px}
+.creat p{ font-size:14px;font-family: 'Century Gothic';  text-align:center; color:#303030; font-weight:normal; padding:10px 0px 5px 0px; line-height:20px;}
+
+.creat .arw{ width:63px; height:33px; position:absolute;right: -49px;top: 114px;}
+
+.htw { float:left; width:100%; margin:0px 0px 7px 0px; position:relative;}
+.how_it {float:left; width:110px; height:68px; }
+.htw span{ position:absolute; top:-17px;left: 96px; color:#fff; font-size:10px; width:36px; height:26px; line-height:18px; padding:10px 0px 0px 0px; background:#e65b16;border-radius:36px; -moz-border-radius:36px; -webkit-border-radius:36px; }
+.how_it { float:left; margin:0px 0px 0px 0px;}
+.how_mid{ clear:both; width:119px; margin:0 auto; border:5px solid #e65b16; border-radius:119px; -moz-border-radius:119px; -webkit-border-radius:119px; overflow:hidden}
+
+
+.faq{ float:left; width:486px; margin:0px 0px 20px 0px; border:1px solid #b3b3b3; background:#fff;}
+.faq h3{ font-size:18px; text-transform:uppercase; color:#0082dc; font-family: 'Century Gothic'; font-weight:normal; padding:14px 0px 0px 13px; border-bottom:1px dashed #d3d3d3; padding-bottom:15px;}
+.faq h3 span{color:#656565; border-bottom:3px solid #0082dc;}
+.faq h6{ font-size:13px; text-transform:uppercase; color:#0082dc;  font-family:"Century Gothic";  font-weight:normal; padding:14px 8px 10px 13px; float:right; }
+.faq h6 a{ color:#cd815c; text-decoration:none; text-transform:uppercase;}
+
+
+.ques{ float:left; width:471px; border:1px solid #b3b3b3; margin:10px 0px 0px 6px; min-height:58px;}
+.ques_1{ float:left; width:39px; margin:6px 0px 0px 6px}
+.ques_2{ float:left; width:337px; margin:0px 0px 0px 0px}
+.ques_2 p{ font-size:13px; color:#303030; font-family:"Century Gothic"; line-height:19px;padding: 6px 0px 0px 9px;}
+.ques_2 p span{ font-size:15px; display:block; color:#0082dc; text-transform:uppercase; font-family:"Century Gothic"; line-height:19px;}
+.ques_3{ float:right; width:80px; margin:15px 5px 0px 0px}
+
+
+.news{ float:right; width:486px; margin:0px 0px 20px 0px; border:1px solid #b3b3b3; background:#fff;}
+.news h3{ font-size:18px; text-transform:uppercase; color:#0082dc; font-family: 'Century Gothic'; font-weight:normal; padding:14px 0px 0px 13px; border-bottom:1px dashed #d3d3d3; padding-bottom:15px;}
+.news h3 span{color:#656565; border-bottom:3px solid #0082dc;}
+.news h6{ font-size:13px; text-transform:uppercase; color:#0082dc;  font-family:"Century Gothic";  font-weight:normal; padding:14px 8px 10px 13px; float:right; }
+.news h6 a{ color:#cd815c; text-decoration:none; text-transform:uppercase;}
+
+.nws{ float:left; width:100%; border-bottom:1px dashed #d3d3d3; margin:10px 0px 0px 0px; min-height:58px;}
+.nws_1{ float:left; width:427px; margin:0px 0px 0px 0px}
+.nws_1 p{ font-size:13px; color:#303030; font-family:"Century Gothic"; line-height:19px;padding: 6px 0px 0px 9px;}
+.nws_1 p span{ font-size:12px; display:block; color:#0082dc; text-transform:uppercase; font-family:"Century Gothic"; line-height:19px;}
+.nws_2{ float:right; width: 30px;margin: 9px 10px 0px 0px;}
+
+
+
+
+footer{ width:100%; margin:0px 0px 0px 0px; float:left;background:#ebebeb ; padding:20px 0px; border-top:#0082dc solid 2px;}
+.footer_text{ padding:10px 0 0 0; width:625px; font-size:14px; color:#000; line-height:20px; float:left; text-align:justify}
+.footer_text span{color:#ff1300}
+.footer_pay{float:left; margin-left:20px;}
+.tvoa_instructions{
+    color: #303030;
+    font-family: "Century Gothic";
+    font-size: 15px;
+    line-height: 20px;
+    padding: 0px 0 0 30px;
+    text-align: justify;
+}
+ul.tvoa_instructions li{
+    list-style-type: decimal;
+    padding-bottom: 10px;
+}
+ul.tvoa_instructions li ul{
+    padding-left:50px;
+}
+ul.tvoa_instructions li ul li{
+    list-style-type: lower-roman;
+}
+ul.tvoa_instructions li a{
+    text-decoration: none;
+    color: #303030;
+    padding: 0px 0 10px 0px;
+}
+
+/* new */
+/* new */
+
+.doc_instructions{
+    color: #303030;
+    font-family: "Century Gothic";
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0px 0 0 30px;
+    text-align: justify;
+     font-weight: bold;
+}
+ul.doc_instructions li{
+    list-style-type: decimal;
+    padding-bottom: 10px;
+    font-weight: normal;
+}
+ul.doc_instructions li ul{
+   
+    padding-left:50px;
+}
+ul.doc_instructions li ul li{
+    list-style-type: decimal;
+}
+
+
+.left_bar_inner li.selected a{ color:#0082dc;}
+.left_bar_inner a:hover,.left_bar_inner li.selected a:hover{color:#0082dc; }
+
+.h2a{
+    color: #e65b16;
+    font-family: 'Century Gothic';
+    font-size: 20px;
+    font-weight:bold;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+
+.style2 {
+    font-weight: bold;
+    font-size: 50px;
+    color: #CC0000;
+}    
+.help_desk{
+    border:1px solid #ccc;
+}
+.help_desk_heading{
+    font-size: 19px;
+    padding: 0px 4px 0px 0px;
+    font-family: "Century Gothic";
+    color: #0082DC;
+    text-align: center;
+    font-weight:bold;
+    text-align: left;
+}
+.help_desk_no{
+    float:left;
+    font-size: 16px;               
+    font-family: "Century Gothic";
+    color: #AD1A46;
+    text-align: center;
+    font-weight:bold;
+    text-align: center;
+    margin-top:20px;
+}
+.help_desk_image{
+    float:left;
+}
+
+.contactLi{width:100%;}
+.contactLi ul{list-style:none; margin:0; padding:0;}
+.contactLi ul li{font-size:14px; color:#333; margin-bottom:5px; background:none !important; padding-left:10px;}
+.contactLi ul li a{font-size:14px;}
+.contactLi ul li img{float:left; margin-right:5px;}
+
+
+
+.right_side ul{list-style:none; margin:0; padding:0; font-family: "Century Gothic";}
+.right_side ul li{font-size:16px; color:#333; margin-bottom:10px;}
+.right_side ul li a{font-size:16px; color:#0082dc; text-decoration:none;}
+.right_side ul li img{float:left; margin-right:10px;}
+
+.cartWrap{border:#ccc solid 1px; padding:30px 10px 10px; margin-bottom:20px; float:left; box-sizing:border-box; width:100%;}
+
+
+/****---- inner page --------*/
+.innerBg{background:#ebebeb}
+.innerWraper{width:100%; max-width:1200px; margin:20px auto; background:#fff;}
+.innerWraperForm{margin: 0 auto; border: 1px solid rgba(117, 167, 214,0.2); width: 80%; padding-bottom: 0px; background:#fff;}
+.innerHeader{width:100%; float:left; background:#fff; height:125px; border-bottom:none}
+.innerlogo{width: auto; float:left;}
+.innerHeaderRight{float:right; width: auto}
+.pageName,.footerName{ font-family:Verdana,Arial,Helvetica,sans-serif; font-size:22px; font-weight:bold; background:#0082dc; text-align:center; color:#fff; padding:5px 0;}
+.form_containerInner{width:100%; padding:10px; box-sizing:border-box; float:left; background:#fff}
+.rowInner{width:100%; float:left}
+.wid50,.wid70,.wid65,.wid30,.wid45,.wid25,.checkWrap{float:left; padding:5px 10px; box-sizing:border-box;}
+.wid30{width:30%;}
+.wid25{width:25%;}
+.wid45{width:45%;}
+.wid65{width:65%;}
+.wid70{width:70%; padding:0}
+.wid50{width:50%;}
+.checkWrap,.checkWrapIn,.radioWrap,.checkWrapBottom{width:100%; padding:10px; font-family:Verdana,Arial,Helvetica,sans-serif; box-sizing:border-box}
+.radioWrap{color:#0D477C; padding:0; line-height:25px;}
+.checkWrap{ padding:14px 10px; padding-bottom:5px}
+.checkWrapIn{ padding:0 10px;}
+.checkWrapBottom{line-height:18px}
+.fieldWrap{float:right; font-size:14px; font-family:Verdana,Arial,Helvetica,sans-serif; padding:6px 0}
+label span{color:#F00; font-size:16px;}
+input[type=text],select{width:100%; padding:4px 0; font-size:14px; border:1px solid #CCC; box-sizing:border-box}
+input[type=text]{padding:6px}
+input[type=button]{display: inline-block; margin: 10px 0px 0px 0px; text-align: center; vertical-align: middle; padding: 6px 12px; font-size: 14px; border-radius: 3px; background:#2faaff; color:#fff; border:#1f98eb solid 1px; line-height:22px; cursor:pointer; font-family:Verdana,Arial,Helvetica,sans-serif;}
+input[type=button]:hover{background:#1f98eb}
+.mandatoryField{border:#F00 solid 1px !important; font-family:Verdana,Arial,Helvetica,sans-serif; box-shadow:0px 0px 3px rgba(0, 0, 0, 0.4)}
+.mandatoryText,.dateText{color:#F00; padding:7px 0; font-size:14px; float:left; font-family:Verdana,Arial,Helvetica,sans-serif;}
+.dateText{color:#303030}
+
+.displayNone{display:none}
+input[type=radio], input[type=checkbox]{margin-right:8px;}
+.p_l_36{padding-left:36px;}
+.captcha{width:170px;height:100%;}
+.referesh{width:30px;height:30px;}
+.text_center{text-align:center}
+
+@media all and (max-width:768px){
+	.fieldWrap{font-size:12px;}
+	.innerlogo img{width:100px}
+	.innerHeaderRight img{width:375px;}
+	.innerHeader{height:56px;}
+	.pageName, .footerName{font-size:16px;}
+	.wid30,.wid25,.wid70,.wid45{width:50%;}
+	.wid50{width:100%;}
+.mandatoryText{font-size:12px; padding:0}
+.p_l_36{padding-left:20px;}
+.fieldWrap{font-size:12px}
+label span{color:#F00; font-size:16px;}
+input[type=text],select{font-size:12px;}
+input[type=button]{font-size: 12px;}
+.mandatoryText{font-size:12px;}
+.dateText{font-size:12px}
+.innerWraperForm{width:100%;}
+.innerWraper{margin:10px auto;}
+}
+@media all and (max-width:480px){
+	.innerlogo img{width:85px}
+	.innerHeaderRight img{width:230px; height:44px}
+.wid30,.wid25,.wid70,.wid45,.wid50{width:100%;}
+.fieldWrap{padding-bottom:0; float:left}
+.innerHeader{height:44px;}
+}
