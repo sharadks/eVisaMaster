@@ -1,697 +1,909 @@
 <div class="global-form form1">
-    <div class="row">                             
-           <div class="col-1 mandatory" title="Passport Type" id="passport_type">Application Type</div>
-           <div class="col-2">
-               
-               <select name="appl.ppt_type_id" id="ppt_type_id" onChange="check_ppt_type()">
-                   <option value="">Select</option>
-                   
-                       <option value="1">Normal Processing (4 to 7 Business Days)</option>
-                   
-                       <option value="2">Urgent Processing (8 to 24 Business Hours) </option>
-                   
-                                                      
-               </select>
-           </div>
-           <div class="col-3"></div> 
-       </div>
-       
-       <div class="row">                             
-           <div class="col-1 mandatory" title="Passport Type" id="passport_type">Passport Type</div>
-           <div class="col-2">
-               
-               <select name="appl.ppt_type_id" id="ppt_type_id" onChange="check_ppt_type()">
-                   <option value="">Select Passport Type</option>
-                   
-                       <option value="1">ORDINARY PASSPORT</option>
-                   
-                       <option value="2">OFFICIAL PASSPORT</option>
-                   
-                       <option value="3">DIPLOMATIC PASSPORT</option>
-                   
-                       <option value="7">SERVICE PASSPORT</option>
-                   
-                       <option value="8">SPECIAL PASSPORT</option>
-                   
-               </select>
-           </div>
-           <div class="col-3"></div> 
-       </div>
-       <div class="row"> 
-           <div class="col-1 mandatory" title="Nationality" id="appl_nationality">Nationality</div>
-           <div class="col-2">       
-               
-               <select name="appl.nationality" id="nationality_id" onChange="fetchETVportList_js($(this).val())">
-                   <option value="">Select Nationality</option>
-                   
-                       <option value="ALB">ALBANIA</option>
-                   
-                       <option value="AND">ANDORRA</option>
-                   
-                       <option value="AGO">ANGOLA</option>
-                   
-                       <option value="AIA">ANGUILLA</option>
-                   
-                       <option value="ATG">ANTIGUA AND BARBUDA</option>
-                   
-                       <option value="ARG">ARGENTINA</option>
-                   
-                       <option value="ARM">ARMENIA</option>
-                   
-                       <option value="ABW">ARUBA</option>
-                   
-                       <option value="AUS">AUSTRALIA</option>
-                   
-                       <option value="AUT">AUSTRIA</option>
-                   
-                       <option value="AZE">AZERBAIJAN</option>
-                   
-                       <option value="BHS">BAHAMAS</option>
-                   
-                       <option value="BRB">BARBADOS</option>
-                   
-                       <option value="BEL">BELGIUM</option>
-                   
-                       <option value="BLZ">BELIZE</option>
-                   
-                       <option value="BOL">BOLIVIA</option>
-                   
-                       <option value="BIH">BOSNIA AND HERZEGOVINA</option>
-                   
-                       <option value="BWA">BOTSWANA</option>
-                   
-                       <option value="BRA">BRAZIL</option>
-                   
-                       <option value="BRN">BRUNEI</option>
-                   
-                       <option value="BGR">BULGARIA</option>
-                   
-                       <option value="BDI">BURUNDI</option>
-                   
-                       <option value="KHM">CAMBODIA</option>
-                   
-                       <option value="CMR">CAMEROON</option>
-                   
-                       <option value="CAN">CANADA</option>
-                   
-                       <option value="CPV">CAPE VERDE</option>
-                   
-                       <option value="CYM">CAYMAN ISLANDS</option>
-                   
-                       <option value="CHL">CHILE</option>
-                   
-                       <option value="CHN">CHINA-CHINA</option>
-                   
-                       <option value="HKG">CHINA- SAR HONGKONG</option>
-                   
-                       <option value="MAC">CHINA- SAR MACAU</option>
-                   
-                       <option value="COL">COLOMBIA</option>
-                   
-                       <option value="COM">COMOROS</option>
-                   
-                       <option value="COK">COOK ISLANDS</option>
-                   
-                       <option value="CRI">COSTA RICA</option>
-                   
-                       <option value="CIV">COTE D'IVOIRE</option>
-                   
-                       <option value="HRV">CROATIA</option>
-                   
-                       <option value="CUB">CUBA</option>
-                   
-                       <option value="CYP">CYPRUS</option>
-                   
-                       <option value="CZE">CZECH REPUBLIC</option>
-                   
-                       <option value="DNK">DENMARK</option>
-                   
-                       <option value="DJI">DJIBOUTI</option>
-                   
-                       <option value="DMA">DOMINICA</option>
-                   
-                       <option value="DOM">DOMINICAN REPUBLIC</option>
-                   
-                       <option value="TLS">EAST TIMOR (DEMOCRATIC REPUBLIC OF)</option>
-                   
-                       <option value="ECU">ECUADOR</option>
-                   
-                       <option value="SLV">EL SALVADOR</option>
-                   
-                       <option value="ERI">ERITREA</option>
-                   
-                       <option value="EST">ESTONIA</option>
-                   
-                       <option value="FJI">FIJI</option>
-                   
-                       <option value="FIN">FINLAND</option>
-                   
-                       <option value="FRA">FRANCE</option>
-                   
-                       <option value="GAB">GABON</option>
-                   
-                       <option value="GMB">GAMBIA</option>
-                   
-                       <option value="GEO">GEORGIA</option>
-                   
-                       <option value="DEU">GERMANY</option>
-                   
-                       <option value="GHA">GHANA</option>
-                   
-                       <option value="GRC">GREECE</option>
-                   
-                       <option value="GRD">GRENADA</option>
-                   
-                       <option value="GTM">GUATEMALA</option>
-                   
-                       <option value="GIN">GUINEA</option>
-                   
-                       <option value="GUY">GUYANA</option>
-                   
-                       <option value="HTI">HAITI</option>
-                   
-                       <option value="HND">HONDURAS</option>
-                   
-                       <option value="HUN">HUNGARY</option>
-                   
-                       <option value="ISL">ICELAND</option>
-                   
-                       <option value="IDN">INDONESIA</option>
-                   
-                       <option value="IRL">IRELAND</option>
-                   
-                       <option value="ISR">ISRAEL</option>
-                   
-                       <option value="ITA">ITALY</option>
-                   
-                       <option value="JAM">JAMAICA</option>
-                   
-                       <option value="JPN">JAPAN</option>
-                   
-                       <option value="JOR">JORDAN</option>
-                   
-                       <option value="KEN">KENYA</option>
-                   
-                       <option value="KIR">KIRIBATI</option>
-                   
-                       <option value="LAO">LAOS</option>
-                   
-                       <option value="LVA">LATVIA</option>
-                   
-                       <option value="LSO">LESOTHO</option>
-                   
-                       <option value="LBR">LIBERIA</option>
-                   
-                       <option value="LIE">LIECHTENSTEIN</option>
-                   
-                       <option value="LTU">LITHUANIA</option>
-                   
-                       <option value="LUX">LUXEMBOURG</option>
-                   
-                       <option value="MDG">MADAGASCAR</option>
-                   
-                       <option value="MWI">MALAWI</option>
-                   
-                       <option value="MYS">MALAYSIA</option>
-                   
-                       <option value="MLI">MALI</option>
-                   
-                       <option value="MLT">MALTA</option>
-                   
-                       <option value="MHL">MARSHALL ISLANDS</option>
-                   
-                       <option value="MUS">MAURITIUS</option>
-                   
-                       <option value="MEX">MEXICO</option>
-                   
-                       <option value="FSM">MICRONESIA (FEDERATED STATES OF)</option>
-                   
-                       <option value="MDA">MOLDOVA</option>
-                   
-                       <option value="MCO">MONACO</option>
-                   
-                       <option value="MNG">MONGOLIA</option>
-                   
-                       <option value="MNE">MONTENEGRO</option>
-                   
-                       <option value="MSR">MONTSERRAT</option>
-                   
-                       <option value="MOZ">MOZAMBIQUE</option>
-                   
-                       <option value="MMR">MYANMAR</option>
-                   
-                       <option value="NAM">NAMIBIA</option>
-                   
-                       <option value="NRU">NAURU</option>
-                   
-                       <option value="NLD">NETHERLANDS</option>
-                   
-                       <option value="NZL">NEW ZEALAND</option>
-                   
-                       <option value="NIC">NICARAGUA</option>
-                   
-                       <option value="NER">NIGER</option>
-                   
-                       <option value="NIU">NIUE ISLAND</option>
-                   
-                       <option value="NOR">NORWAY</option>
-                   
-                       <option value="OMN">OMAN</option>
-                   
-                       <option value="PLW">PALAU</option>
-                   
-                       <option value="PSE">PALESTINE</option>
-                   
-                       <option value="PAN">PANAMA</option>
-                   
-                       <option value="PNG">PAPUA NEW GUINEA</option>
-                   
-                       <option value="PRY">PARAGUAY</option>
-                   
-                       <option value="PER">PERU</option>
-                   
-                       <option value="PHL">PHILIPPINES</option>
-                   
-                       <option value="POL">POLAND</option>
-                   
-                       <option value="PRT">PORTUGAL</option>
-                   
-                       <option value="KOR">REPUBLIC OF KOREA</option>
-                   
-                       <option value="MKD">REPUBLIC OF MACEDONIA</option>
-                   
-                       <option value="ROU">ROMANIA</option>
-                   
-                       <option value="RUS">RUSSIAN FEDERATION</option>
-                   
-                       <option value="RWA">RWANDA</option>
-                   
-                       <option value="KNA">SAINT KITTS AND NEVIS</option>
-                   
-                       <option value="LCA">SAINT LUCIA</option>
-                   
-                       <option value="VCT">SAINT VINCENT AND THE GRENADINES</option>
-                   
-                       <option value="WSM">SAMOA</option>
-                   
-                       <option value="SMR">SAN MARINO</option>
-                   
-                       <option value="SEN">SENEGAL</option>
-                   
-                       <option value="SRB">SERBIA</option>
-                   
-                       <option value="SYC">SEYCHELLES</option>
-                   
-                       <option value="SLE">SIERRA LEONE</option>
-                   
-                       <option value="SGP">SINGAPORE</option>
-                   
-                       <option value="SVK">SLOVAKIA</option>
-                   
-                       <option value="SVN">SLOVENIA</option>
-                   
-                       <option value="SLB">SOLOMON ISLANDS</option>
-                   
-                       <option value="ZAF">SOUTH AFRICA</option>
-                   
-                       <option value="ESP">SPAIN</option>
-                   
-                       <option value="LKA">SRI LANKA</option>
-                   
-                       <option value="SUR">SURINAME</option>
-                   
-                       <option value="SWZ">SWAZILAND</option>
-                   
-                       <option value="SWE">SWEDEN</option>
-                   
-                       <option value="CHE">SWITZERLAND</option>
-                   
-                       <option value="TWN">TAIWAN</option>
-                   
-                       <option value="TJK">TAJIKISTAN</option>
-                   
-                       <option value="TZA">TANZANIA</option>
-                   
-                       <option value="THA">THAILAND</option>
-                   
-                       <option value="TON">TONGA</option>
-                   
-                       <option value="TTO">TRINIDAD AND TOBAGO</option>
-                   
-                       <option value="TCA">TURKS AND CAICOS ISL</option>
-                   
-                       <option value="TUV">TUVALU</option>
-                   
-                       <option value="UGA">UGANDA</option>
-                   
-                       <option value="UKR">UKRAINE</option>
-                   
-                       <option value="ARE">UNITED ARAB EMIRATES</option>
-                   
-                       <option value="GBR">UNITED KINGDOM</option>
-                   
-                       <option value="USA">UNITED STATES OF AMERICA</option>
-                   
-                       <option value="URY">URUGUAY</option>
-                   
-                       <option value="UZB">UZBEKISTAN</option>
-                   
-                       <option value="VUT">VANUATU</option>
-                   
-                       <option value="VAT">VATICAN CITY STATE ( HOLY SEE)</option>
-                   
-                       <option value="VEN">VENEZUELA</option>
-                   
-                       <option value="VNM">VIETNAM</option>
-                   
-                       <option value="ZMB">ZAMBIA</option>
-                   
-                       <option value="ZWE">ZIMBABWE</option>
-                   
-               </select>                                                                       
-           </div>
-           <div class="col-3"></div> 
-       </div>
-       <div class="row"> 
-           <div class="col-1 mandatory" title="Port Of Arrival" id="port_india">Port Of Arrival</div>
-           <div class="col-2">     
-               
-               <select name="appl.missioncode" id="missioncode_id" class=""><option value="">Select Port of Arrival</option><option value="I022">AHMEDABAD AIRPORT</option><option value="I032">AMRITSAR AIRPORT</option><option value="I096">BAGDOGRA AIRPORT</option><option value="I085">BENGALURU AIRPORT</option><option value="I010">CALICUT AIRPORT</option><option value="I005">CHANDIGARH AIRPORT</option><option value="I008">CHENNAI AIRPORT</option><option value="I024">COCHIN AIRPORT</option><option value="I224">COCHIN SEAPORT</option><option value="I094">COIMBATORE AIRPORT</option><option value="I004">DELHI AIRPORT</option><option value="I012">GAYA AIRPORT</option><option value="I033">GOA AIRPORT</option><option value="I283">GOA SEAPORT</option><option value="I019">GUWAHATI AIRPORT</option><option value="I041">HYDERABAD AIRPORT</option><option value="I006">JAIPUR AIRPORT</option><option value="I002">KOLKATA AIRPORT</option><option value="I021">LUCKNOW AIRPORT</option><option value="I092">MANGALORE AIRPORT</option><option value="I293">MANGALORE SEAPORT</option><option value="I001">MUMBAI AIRPORT</option><option value="I016">NAGPUR AIRPORT</option><option value="I026">PUNE AIRPORT</option><option value="I003">TIRUCHIRAPALLI AIRPORT</option><option value="I023">TRIVANDRUM AIRPORT</option><option value="I007">VARANASI AIRPORT</option></select>                                                                       
-           </div>
-           <div class="col-3"></div> 
-       </div>
-       <div class="row"> 
-           <div class="col-1 mandatory " title="Date of Birth" id="appl_dob">Date of Birth</div>
-           <div class="col-2">                              
-               <input name="appl.birthdate" type="text" size="10" id="dob_id" value="" class="hasDatepicker"> 
-           </div>
-           <div class="col-3" id="dd_mm_yy_1" title="(DD/MM/YYYY)"></div> 
-       </div>
-       <div class="row"> 
-           <div class="col-1 mandatory" title="Email ID" id="appl_email_id">Email ID</div>
-           <div class="col-2">                                    
-               <input name="appl.email" type="text" size="50" maxlength="50" value="" id="email_id">                                                                
-           </div>
-           <div class="col-3"></div> 
-       </div>
-       <div class="row"> 
-           <div class="col-1 mandatory" title="Re-enter Email" id="re_email">Re-enter Email ID</div>
-           <div class="col-2">
-               <input name="appl.email_re" maxlength="50" value="" type="text" size="50" id="email_re_id">                           
-           </div>
-           <div class="col-3"></div> 
-       </div>
-       <div class="row"> 
-           <div class="col-1 mandatory" title="Expected Date of Arrival" id="expected_arrival_date">Expected Date of Arrival</div>
-           <div class="col-2">                                    
-               <input name="appl.journeydate" type="text" size="10" id="jouryney_id" value="" class="hasDatepicker">                                                                    
-           </div>
-           <div class="col-3" id="dd_mm_yy_2" title="(DD/MM/YYYY)"></div> 
-       </div>
-           <div class="row">
-               <div class="col-1 mandatory" title="Visa Type">Visa Service</div>
-                   <div class="col-2"> 
-                           <input type="checkbox" value="3" name="evisa_service" onChange="show_hide_purpose($(this),3)" id="visa_ser_id">eTOURIST VISA    <br>
-                   </div>
-                   <div class="col-3 error1" id="evisa_ser_purpose_error">Please select purpose for eTOURIST VISA</div>
-               </div>
-                   <div class="row purpose_row_3" style="display: block;">
-                       
-                       <div class="col-1"></div>
-                       <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;"> 
-                           <input type="radio" name="evisa_purpose_3" value="21" class="evisa_purpose_3" onClick="assign_purpose(3,21)"> RECREATION/SIGHT-SEEING <br>
-                       </div>
-                       <div class="col-3">
-                       </div>
-                   </div>
-                   <div class="row purpose_row_3" style="display: block;">
-                       
-                       <div class="col-1"></div>
-                       <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;"> 
-                           <input type="radio" name="evisa_purpose_3" value="22" class="evisa_purpose_3" onClick="assign_purpose(3,22)"> MEETING FRIENDS/RELATIVES <br>
-                       </div>
-                       <div class="col-3">
-                       </div>
-                   </div>
-               
-           
-               
-                   <div class="row purpose_row_3" style="display: block;">
-                       
-                       <div class="col-1"></div>
-                       <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;"> 
-                           <input type="radio" name="evisa_purpose_3" value="23" class="evisa_purpose_3" onClick="assign_purpose(3,23)"> SHORT TERM YOGA PROGRAMME <br>
-                       </div>
-                       <div class="col-3">
-                       </div>
-                   </div>
-               
-           
-               
-           
-               
-           
-               
-           
-               
-           
-               
-           
-               
-           
-               
-           
-               
-           
-               
-           
-          <input type="hidden" id="purpose_3" value="21">
-                                   
-           <div class="row">
-               <div class="col-1 " title="Visa Type"></div>
-                   <div class="col-2"> 
-                           <input type="checkbox" value="16" name="evisa_service" onChange="show_hide_purpose($(this),16)">eMEDICAL VISA    <br>
-                   </div>
-                   <div class="col-3">
-                   </div>
-               </div>
+  <form #firstForm="ngForm">
+    <div class="row">
+      <div class="col-1 mandatory" title="Passport Type" id="passport_type">
+        Application Type
+      </div>
+      <div class="col-2">
+        <select
+          name="applType"
+          #applType="ngModel"
+          [(ngModel)]="firstForm.applType"
+          required
+        >
+          <option value="">Select</option>
 
-                
+          <option value="1">Normal Processing (4 to 7 Business Days)</option>
 
-           
-               
-           
-               
-           
-               
-           
-               
-                   <div class="row purpose_row_16" style="display: none">
-                       
-                       <div class="col-1"></div>
-                       <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;"> 
-                           <input type="radio" name="evisa_purpose_16" value="24" class="evisa_purpose_16" onClick="assign_purpose(16,24)"> SHORT  TERM MEDICAL TREATMENT OF SELF <br>
-                       </div>
-                       <div class="col-3">
-                       </div>
-                   </div>
-               
-           
-               
-           
-               
-           
-               
-           
-               
-           
-               
-           
-               
-           
-               
-           
-               
-           
-          <input type="hidden" id="purpose_16">
-                                   
-           <div class="row">
-               <div class="col-1 " title="Visa Type"></div>
-                   <div class="col-2"> 
-                           <input type="checkbox" value="1" name="evisa_service" onChange="show_hide_purpose($(this),1)">eBUSINESS VISA    <br>
-                   </div>
-                   <div class="col-3">
-                   </div>
-               </div>
+          <option value="2">Urgent Processing (8 to 24 Business Hours) </option>
+        </select>
+      </div>
+      <div *ngIf="applType.errors && applType.touched">
+        <div *ngIf="applType.errors.required" class="col-3">
+          Please select Applicatio Type
+        </div>
+      </div>
+    </div>
 
-                
+    <div class="row">
+      <div class="col-1 mandatory" title="Passport Type" id="passport_type">
+        Passport Type
+      </div>
+      <div class="col-2">
+        <select
+          name="pptType"
+          #pptType="ngModel"
+          [(ngModel)]="firstForm.pptType"
+          required
+        >
+          <option value="">Select Passport Type</option>
 
-           
-               
-           
-               
-           
-               
-           
-               
-           
-               
-                   <div class="row purpose_row_1" style="display: none">
-                       
-                       <div class="col-1"></div>
-                       <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;"> 
-                           <input type="radio" name="evisa_purpose_1" value="25" class="evisa_purpose_1" onClick="assign_purpose(1,25)"> TO SET UP INDUSTRIAL/BUSINESS VENTURE <br>
-                       </div>
-                       <div class="col-3">
-                       </div>
-                   </div>
-               
-           
-               
-                   <div class="row purpose_row_1" style="display: none">
-                       
-                       <div class="col-1"></div>
-                       <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;"> 
-                           <input type="radio" name="evisa_purpose_1" value="26" class="evisa_purpose_1" onClick="assign_purpose(1,26)"> SALE/PURCHASE/TRADE <br>
-                       </div>
-                       <div class="col-3">
-                       </div>
-                   </div>
-               
-           
-               
-                   <div class="row purpose_row_1" style="display: none">
-                       
-                       <div class="col-1"></div>
-                       <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;"> 
-                           <input type="radio" name="evisa_purpose_1" value="27" class="evisa_purpose_1" onClick="assign_purpose(1,27)"> ATTEND TECHNICAL/BUSINESS MEETINGS <br>
-                       </div>
-                       <div class="col-3">
-                       </div>
-                   </div>
-               
-           
-               
-                   <div class="row purpose_row_1" style="display: none">
-                       
-                       <div class="col-1"></div>
-                       <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;"> 
-                           <input type="radio" name="evisa_purpose_1" value="28" class="evisa_purpose_1" onClick="assign_purpose(1,28)"> TO RECRUIT MANPOWER <br>
-                       </div>
-                       <div class="col-3">
-                       </div>
-                   </div>
-               
-           
-               
-                   <div class="row purpose_row_1" style="display: none">
-                       
-                       <div class="col-1"></div>
-                       <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;"> 
-                           <input type="radio" name="evisa_purpose_1" value="29" class="evisa_purpose_1" onClick="assign_purpose(1,29)"> PARTICIPATION IN EXHIBITIONS,BUSINESS/TRADE FAIRS <br>
-                       </div>
-                       <div class="col-3">
-                       </div>
-                   </div>
-               
-           
-               
-                   <div class="row purpose_row_1" style="display: none">
-                       
-                       <div class="col-1"></div>
-                       <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;"> 
-                           <input type="radio" name="evisa_purpose_1" value="30" class="evisa_purpose_1" onClick="assign_purpose(1,30)"> EXPERT/SPECIALIST IN CONNECTION WITH AN ONGOING PROJECT <br>
-                       </div>
-                       <div class="col-3">
-                       </div>
-                   </div>
-               
-           
-               
-                   <div class="row purpose_row_1" style="display: none">
-                       
-                       <div class="col-1"></div>
-                       <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;"> 
-                           <input type="radio" name="evisa_purpose_1" value="31" class="evisa_purpose_1" onClick="assign_purpose(1,31)"> CONDUCTING TOURS <br>
-                       </div>
-                       <div class="col-3">
-                       </div>
-                   </div>
-               
-           
-               
-                   <div class="row purpose_row_1" style="display: none">
-                       
-                       <div class="col-1"></div>
-                       <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;"> 
-                           <input type="radio" name="evisa_purpose_1" value="32" class="evisa_purpose_1" onClick="assign_purpose(1,32)"> TO DELIVER LECTURE/S UNDER GLOBAL INITIATIVE FOR ACADEMIC NETWORKS (GIAN) <br>
-                       </div>
-                       <div class="col-3">
-                       </div>
-                   </div>
-               
-          
-          
-          
-             <input type="hidden" id="purpose_61" value="21">
-                                   
-           <div class="row">
-               <div class="col-1 " title="Visa Type"></div>
-                   <div class="col-2"> 
-                           <input type="checkbox" value="61" name="evisa_service" onChange="show_hide_purpose($(this),61)">eMEDICAL ATTENDANT VISA 
-<br>
-                   </div>
-                   <div class="col-3">
-                   </div>
-               </div>
-               
-                   <div class="row purpose_row_61" style="display: none">
-                       
-                       <div class="col-1"></div>
-                       <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;"> 
-                           <input type="radio" name="evisa_purpose_61" value="24" class="evisa_purpose_61" onClick="assign_purpose(61,24)">  TO ACCOMPANY PATIENT TRAVELLING TO INDIA ON EMEDICAL VISA 
-<br>
-                       </div>
-                       <div class="col-3">
-                       </div>
-                   </div>
-               
-               
-               
-               
-           
-               
-           
-          <input type="hidden" id="purpose_1">
-       
+          <option value="1">ORDINARY PASSPORT</option>
 
-      <input type="hidden" name="evisa_purpose" id="evisa_purpose" value="">
+          <option value="2">OFFICIAL PASSPORT</option>
 
+          <option value="3">DIPLOMATIC PASSPORT</option>
 
-       <div class="row">
-           <div class="col-1"></div>
-           <div class="col-2"> <img src="../../assets/images/captcha" id="capt" onload="image_loaded();" style="display: inline">                                    
-           </div>
-           <div class="col-3"><a href="" onClick="return refreshCaptcha();" style="vertical-align: baseline"><img src="../../assets/images/refresh.png" style="width:30px;height:30px;display: inline"></a></div>
-       </div>                      
+          <option value="7">SERVICE PASSPORT</option>
 
-       <div class="row">
-           <div class="col-1 mandatory" id="enter_code" title="Please enter above text">Please enter above text</div>
-           <div class="col-2"><input type="text" name="captcha" id="captcha" maxlength="20"></div>
-           <div class="col-3" style="list-style-type: none"></div>
-       </div>
-       <div class="row text_center" style="margin-top:0px;">                           
-           <div id="registration_common_error" style="text-align:center" class="error1"></div>
-           
-           <input type="hidden" value="3" name="appl.visa_type_id">
-           <br>
-           <input type="button" class="btn btn-primary" value="Continue" (click)="goToNext()">
-           <input type="hidden" name="submit_registration" value="Continue">
-          
-       </div>
+          <option value="8">SPECIAL PASSPORT</option>
+        </select>
+      </div>
+      <div class="col-3"></div>
+      <div *ngIf="pptType.errors && pptType.touched">
+        <div *ngIf="pptType.errors.required" class="col-3">
+          Please select Passport Type
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1 mandatory" title="Nationality" id="appl_nationality">
+        Nationality
+      </div>
+      <div class="col-2">
+        <select
+          name="nationality"
+          #nationality="ngModel"
+          [(ngModel)]="firstForm.nationality"
+          required
+        >
+          <option value="">Select Nationality</option>
 
-       <div style="display: block; clear: both;"></div><br><br>
-       <div class="pageHeading1 text_center">
-           e-Visa Application
-       </div>
-  </div>
+          <option value="ALB">ALBANIA</option>
+
+          <option value="AND">ANDORRA</option>
+
+          <option value="AGO">ANGOLA</option>
+
+          <option value="AIA">ANGUILLA</option>
+
+          <option value="ATG">ANTIGUA AND BARBUDA</option>
+
+          <option value="ARG">ARGENTINA</option>
+
+          <option value="ARM">ARMENIA</option>
+
+          <option value="ABW">ARUBA</option>
+
+          <option value="AUS">AUSTRALIA</option>
+
+          <option value="AUT">AUSTRIA</option>
+
+          <option value="AZE">AZERBAIJAN</option>
+
+          <option value="BHS">BAHAMAS</option>
+
+          <option value="BRB">BARBADOS</option>
+
+          <option value="BEL">BELGIUM</option>
+
+          <option value="BLZ">BELIZE</option>
+
+          <option value="BOL">BOLIVIA</option>
+
+          <option value="BIH">BOSNIA AND HERZEGOVINA</option>
+
+          <option value="BWA">BOTSWANA</option>
+
+          <option value="BRA">BRAZIL</option>
+
+          <option value="BRN">BRUNEI</option>
+
+          <option value="BGR">BULGARIA</option>
+
+          <option value="BDI">BURUNDI</option>
+
+          <option value="KHM">CAMBODIA</option>
+
+          <option value="CMR">CAMEROON</option>
+
+          <option value="CAN">CANADA</option>
+
+          <option value="CPV">CAPE VERDE</option>
+
+          <option value="CYM">CAYMAN ISLANDS</option>
+
+          <option value="CHL">CHILE</option>
+
+          <option value="CHN">CHINA-CHINA</option>
+
+          <option value="HKG">CHINA- SAR HONGKONG</option>
+
+          <option value="MAC">CHINA- SAR MACAU</option>
+
+          <option value="COL">COLOMBIA</option>
+
+          <option value="COM">COMOROS</option>
+
+          <option value="COK">COOK ISLANDS</option>
+
+          <option value="CRI">COSTA RICA</option>
+
+          <option value="CIV">COTE D'IVOIRE</option>
+
+          <option value="HRV">CROATIA</option>
+
+          <option value="CUB">CUBA</option>
+
+          <option value="CYP">CYPRUS</option>
+
+          <option value="CZE">CZECH REPUBLIC</option>
+
+          <option value="DNK">DENMARK</option>
+
+          <option value="DJI">DJIBOUTI</option>
+
+          <option value="DMA">DOMINICA</option>
+
+          <option value="DOM">DOMINICAN REPUBLIC</option>
+
+          <option value="TLS">EAST TIMOR (DEMOCRATIC REPUBLIC OF)</option>
+
+          <option value="ECU">ECUADOR</option>
+
+          <option value="SLV">EL SALVADOR</option>
+
+          <option value="ERI">ERITREA</option>
+
+          <option value="EST">ESTONIA</option>
+
+          <option value="FJI">FIJI</option>
+
+          <option value="FIN">FINLAND</option>
+
+          <option value="FRA">FRANCE</option>
+
+          <option value="GAB">GABON</option>
+
+          <option value="GMB">GAMBIA</option>
+
+          <option value="GEO">GEORGIA</option>
+
+          <option value="DEU">GERMANY</option>
+
+          <option value="GHA">GHANA</option>
+
+          <option value="GRC">GREECE</option>
+
+          <option value="GRD">GRENADA</option>
+
+          <option value="GTM">GUATEMALA</option>
+
+          <option value="GIN">GUINEA</option>
+
+          <option value="GUY">GUYANA</option>
+
+          <option value="HTI">HAITI</option>
+
+          <option value="HND">HONDURAS</option>
+
+          <option value="HUN">HUNGARY</option>
+
+          <option value="ISL">ICELAND</option>
+
+          <option value="IDN">INDONESIA</option>
+
+          <option value="IRL">IRELAND</option>
+
+          <option value="ISR">ISRAEL</option>
+
+          <option value="ITA">ITALY</option>
+
+          <option value="JAM">JAMAICA</option>
+
+          <option value="JPN">JAPAN</option>
+
+          <option value="JOR">JORDAN</option>
+
+          <option value="KEN">KENYA</option>
+
+          <option value="KIR">KIRIBATI</option>
+
+          <option value="LAO">LAOS</option>
+
+          <option value="LVA">LATVIA</option>
+
+          <option value="LSO">LESOTHO</option>
+
+          <option value="LBR">LIBERIA</option>
+
+          <option value="LIE">LIECHTENSTEIN</option>
+
+          <option value="LTU">LITHUANIA</option>
+
+          <option value="LUX">LUXEMBOURG</option>
+
+          <option value="MDG">MADAGASCAR</option>
+
+          <option value="MWI">MALAWI</option>
+
+          <option value="MYS">MALAYSIA</option>
+
+          <option value="MLI">MALI</option>
+
+          <option value="MLT">MALTA</option>
+
+          <option value="MHL">MARSHALL ISLANDS</option>
+
+          <option value="MUS">MAURITIUS</option>
+
+          <option value="MEX">MEXICO</option>
+
+          <option value="FSM">MICRONESIA (FEDERATED STATES OF)</option>
+
+          <option value="MDA">MOLDOVA</option>
+
+          <option value="MCO">MONACO</option>
+
+          <option value="MNG">MONGOLIA</option>
+
+          <option value="MNE">MONTENEGRO</option>
+
+          <option value="MSR">MONTSERRAT</option>
+
+          <option value="MOZ">MOZAMBIQUE</option>
+
+          <option value="MMR">MYANMAR</option>
+
+          <option value="NAM">NAMIBIA</option>
+
+          <option value="NRU">NAURU</option>
+
+          <option value="NLD">NETHERLANDS</option>
+
+          <option value="NZL">NEW ZEALAND</option>
+
+          <option value="NIC">NICARAGUA</option>
+
+          <option value="NER">NIGER</option>
+
+          <option value="NIU">NIUE ISLAND</option>
+
+          <option value="NOR">NORWAY</option>
+
+          <option value="OMN">OMAN</option>
+
+          <option value="PLW">PALAU</option>
+
+          <option value="PSE">PALESTINE</option>
+
+          <option value="PAN">PANAMA</option>
+
+          <option value="PNG">PAPUA NEW GUINEA</option>
+
+          <option value="PRY">PARAGUAY</option>
+
+          <option value="PER">PERU</option>
+
+          <option value="PHL">PHILIPPINES</option>
+
+          <option value="POL">POLAND</option>
+
+          <option value="PRT">PORTUGAL</option>
+
+          <option value="KOR">REPUBLIC OF KOREA</option>
+
+          <option value="MKD">REPUBLIC OF MACEDONIA</option>
+
+          <option value="ROU">ROMANIA</option>
+
+          <option value="RUS">RUSSIAN FEDERATION</option>
+
+          <option value="RWA">RWANDA</option>
+
+          <option value="KNA">SAINT KITTS AND NEVIS</option>
+
+          <option value="LCA">SAINT LUCIA</option>
+
+          <option value="VCT">SAINT VINCENT AND THE GRENADINES</option>
+
+          <option value="WSM">SAMOA</option>
+
+          <option value="SMR">SAN MARINO</option>
+
+          <option value="SEN">SENEGAL</option>
+
+          <option value="SRB">SERBIA</option>
+
+          <option value="SYC">SEYCHELLES</option>
+
+          <option value="SLE">SIERRA LEONE</option>
+
+          <option value="SGP">SINGAPORE</option>
+
+          <option value="SVK">SLOVAKIA</option>
+
+          <option value="SVN">SLOVENIA</option>
+
+          <option value="SLB">SOLOMON ISLANDS</option>
+
+          <option value="ZAF">SOUTH AFRICA</option>
+
+          <option value="ESP">SPAIN</option>
+
+          <option value="LKA">SRI LANKA</option>
+
+          <option value="SUR">SURINAME</option>
+
+          <option value="SWZ">SWAZILAND</option>
+
+          <option value="SWE">SWEDEN</option>
+
+          <option value="CHE">SWITZERLAND</option>
+
+          <option value="TWN">TAIWAN</option>
+
+          <option value="TJK">TAJIKISTAN</option>
+
+          <option value="TZA">TANZANIA</option>
+
+          <option value="THA">THAILAND</option>
+
+          <option value="TON">TONGA</option>
+
+          <option value="TTO">TRINIDAD AND TOBAGO</option>
+
+          <option value="TCA">TURKS AND CAICOS ISL</option>
+
+          <option value="TUV">TUVALU</option>
+
+          <option value="UGA">UGANDA</option>
+
+          <option value="UKR">UKRAINE</option>
+
+          <option value="ARE">UNITED ARAB EMIRATES</option>
+
+          <option value="GBR">UNITED KINGDOM</option>
+
+          <option value="USA">UNITED STATES OF AMERICA</option>
+
+          <option value="URY">URUGUAY</option>
+
+          <option value="UZB">UZBEKISTAN</option>
+
+          <option value="VUT">VANUATU</option>
+
+          <option value="VAT">VATICAN CITY STATE ( HOLY SEE)</option>
+
+          <option value="VEN">VENEZUELA</option>
+
+          <option value="VNM">VIETNAM</option>
+
+          <option value="ZMB">ZAMBIA</option>
+
+          <option value="ZWE">ZIMBABWE</option>
+        </select>
+      </div>
+      <div *ngIf="nationality.errors && nationality.touched">
+        <div *ngIf="nationality.errors.required" class="col-3">
+          Please select Nationality
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1 mandatory" title="Port Of Arrival" id="port_india">
+        Port Of Arrival
+      </div>
+      <div class="col-2">
+        <select
+          name="portOfArrival"
+          #portOfArrival="ngModel"
+          [(ngModel)]="firstForm.portOfArrival"
+          required
+          ><option value="">Select Port of Arrival</option
+          ><option value="I022">AHMEDABAD AIRPORT</option
+          ><option value="I032">AMRITSAR AIRPORT</option
+          ><option value="I096">BAGDOGRA AIRPORT</option
+          ><option value="I085">BENGALURU AIRPORT</option
+          ><option value="I010">CALICUT AIRPORT</option
+          ><option value="I005">CHANDIGARH AIRPORT</option
+          ><option value="I008">CHENNAI AIRPORT</option
+          ><option value="I024">COCHIN AIRPORT</option
+          ><option value="I224">COCHIN SEAPORT</option
+          ><option value="I094">COIMBATORE AIRPORT</option
+          ><option value="I004">DELHI AIRPORT</option
+          ><option value="I012">GAYA AIRPORT</option
+          ><option value="I033">GOA AIRPORT</option
+          ><option value="I283">GOA SEAPORT</option
+          ><option value="I019">GUWAHATI AIRPORT</option
+          ><option value="I041">HYDERABAD AIRPORT</option
+          ><option value="I006">JAIPUR AIRPORT</option
+          ><option value="I002">KOLKATA AIRPORT</option
+          ><option value="I021">LUCKNOW AIRPORT</option
+          ><option value="I092">MANGALORE AIRPORT</option
+          ><option value="I293">MANGALORE SEAPORT</option
+          ><option value="I001">MUMBAI AIRPORT</option
+          ><option value="I016">NAGPUR AIRPORT</option
+          ><option value="I026">PUNE AIRPORT</option
+          ><option value="I003">TIRUCHIRAPALLI AIRPORT</option
+          ><option value="I023">TRIVANDRUM AIRPORT</option
+          ><option value="I007">VARANASI AIRPORT</option></select
+        >
+      </div>
+      <div *ngIf="portOfArrival.errors && portOfArrival.touched">
+        <div *ngIf="portOfArrival.errors.required" class="col-3">
+          Please select Port Of Arrival
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1 mandatory " title="Date of Birth" id="appl_dob">
+        Date of Birth
+      </div>
+      <div class="col-2">
+        <input
+          name="dob"
+          type="date"
+          size="10"
+          id="dob"
+          value=""
+          class="hasDatepicker"
+          #dob="ngModel"
+          [(ngModel)]="firstForm.dob"
+          required
+        />
+      </div>
+      <div *ngIf="dob.invalid && (dob.dirty || dob.touched)">
+        <div *ngIf="dob.errors.required" class="col-3">
+          Please enter Date of Birth
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1 mandatory" title="Email ID" id="appl_email_id">
+        Email ID
+      </div>
+      <div class="col-2">
+        <input
+          name="email"
+          type="email"
+          id="email"
+          #email="ngModel"
+          [(ngModel)]="firstForm.email"
+          required
+          [pattern]="emailPattern"
+        />
+      </div>
+      <div *ngIf="email.invalid && (email.dirty || email.touched)">
+        <div *ngIf="email.errors.required" class="col-3">
+          Please enter Email ID
+        </div>
+        <div *ngIf="email.errors.pattern">Email ID is not valid.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1 mandatory" title="Re-enter Email" id="re_email">
+        Re-enter Email ID
+      </div>
+      <div class="col-2">
+        <input
+          name="email_re"
+          maxlength="50"
+          type="email"
+          id="email_re"
+          #email_re="ngModel"
+          [(ngModel)]="firstForm.email_re"
+          required
+          [pattern]="emailPattern"
+        />
+      </div>
+      <div *ngIf="email_re.invalid && (email_re.dirty || email_re.touched)">
+        <div *ngIf="email_re.errors.required" class="col-3">
+          Please re-enter Email ID
+        </div>
+        <div *ngIf="email.errors.pattern">Email ID is not valid.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="col-1 mandatory"
+        title="Expected Date of Arrival"
+        id="expected_arrival_date"
+      >
+        Expected Date of Arrival
+      </div>
+      <div class="col-2">
+        <input
+          name="journeyDate"
+          type="date"
+          id="journeyDate"
+          #journeyDate="ngModel"
+          [(ngModel)]="firstForm.journeyDate"
+          required
+        />
+      </div>
+      <div
+        *ngIf="
+          journeyDate.invalid && (journeyDate.dirty || journeyDate.touched)
+        "
+      >
+        <div *ngIf="journeyDate.errors.required" class="col-3">
+          Please enter Expected Date of Arrival
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1 mandatory" title="Visa Type">Visa Service</div>
+      <div class="col-2">
+        <input
+          type="checkbox"
+          name="firstForm.eTouristvisa_service"
+          (change)="
+            firstForm.eTouristvisa_service = !firstForm.eTouristvisa_service
+          "
+          [checked]="firstForm.eTouristvisa_service"
+        />eTOURIST VISA <br />
+      </div>
+      <div
+        class="col-3 error1"
+        *ngIf="firstForm.eTouristvisa_service && !firstForm.etouristValue"
+      >
+        Please select purpose for eTOURIST VISA
+      </div>
+    </div>
+    <div *ngIf="firstForm.eTouristvisa_service">
+      <div class="row purpose_row_3">
+        <div class="col-1"></div>
+        <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
+          <input
+            type="radio"
+            name="etouristValue"
+            [(ngModel)]="firstForm.etouristValue"
+            value="recreation"
+            required
+          />
+          RECREATION/SIGHT-SEEING <br />
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <div class="row purpose_row_3">
+        <div class="col-1"></div>
+        <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
+          <input
+            type="radio"
+            name="etouristValue"
+            [(ngModel)]="firstForm.etouristValue"
+            value="meetingfriends"
+            required
+          />
+          MEETING FRIENDS/RELATIVES <br />
+        </div>
+        <div class="col-3"></div>
+      </div>
+
+      <div class="row purpose_row_3">
+        <div class="col-1"></div>
+        <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
+          <input
+            type="radio"
+            name="etouristValue"
+            [(ngModel)]="firstForm.etouristValue"
+            value="shorttermyoga"
+            required
+          />
+          SHORT TERM YOGA PROGRAMME <br />
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+
+    <input type="hidden" id="purpose_3" value="21" />
+
+    <div class="row">
+      <div class="col-1 " title="Visa Type"></div>
+      <div class="col-2">
+        <input
+          type="checkbox"
+          name="firstForm.eMedicalValue_service"
+          (change)="
+            firstForm.eMedicalValue_service = !firstForm.eMedicalValue_service
+          "
+          [checked]="firstForm.eMedicalValue_service"
+        />eMEDICAL VISA <br />
+      </div>
+      <div
+        class="col-3 error1"
+        *ngIf="firstForm.eMedicalValue_service && !firstForm.eMedicalValue"
+      >
+        Please select purpose for eMEDICAL VISA
+      </div>
+    </div>
+
+    <div *ngIf="firstForm.eMedicalValue_service">
+      <div class="row purpose_row_16">
+        <div class="col-1"></div>
+        <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
+          <input
+            type="radio"
+            name="eMedicalValue"
+            [(ngModel)]="firstForm.eMedicalValue"
+            value="shortTermMedicalTreat"
+            required
+          />
+          SHORT TERM MEDICAL TREATMENT OF SELF <br />
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+
+    <input type="hidden" id="purpose_16" />
+
+    <div class="row">
+      <div class="col-1 " title="Visa Type"></div>
+      <div class="col-2">
+        <input
+          type="checkbox"
+          name="firstForm.eBusinessValue_service"
+          (change)="
+            firstForm.eBusinessValue_service = !firstForm.eBusinessValue_service
+          "
+          [checked]="firstForm.eBusinessValue_service"
+        />eBUSINESS VISA <br />
+      </div>
+      <div
+        class="col-3 error1"
+        *ngIf="firstForm.eBusinessValue_service && !firstForm.eBusinessValue"
+      >
+        Please select purpose for eBUSINESS VISA
+      </div>
+    </div>
+
+    <div *ngIf="firstForm.eBusinessValue_service">
+      <div class="row purpose_row_1">
+        <div class="col-1"></div>
+        <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
+          <input
+            type="radio"
+            name="eBusinessValue"
+            [(ngModel)]="firstForm.eBusinessValue"
+            value="industrialBusiness"
+            required
+          />
+          TO SET UP INDUSTRIAL/BUSINESS VENTURE <br />
+        </div>
+        <div class="col-3"></div>
+      </div>
+
+      <div class="row purpose_row_1">
+        <div class="col-1"></div>
+        <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
+          <input
+            type="radio"
+            name="eBusinessValue"
+            [(ngModel)]="firstForm.eBusinessValue"
+            value="salePurchaseTrade"
+            required
+          />
+          SALE/PURCHASE/TRADE <br />
+        </div>
+        <div class="col-3"></div>
+      </div>
+
+      <div class="row purpose_row_1">
+        <div class="col-1"></div>
+        <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
+          <input
+            type="radio"
+            name="eBusinessValue"
+            [(ngModel)]="firstForm.eBusinessValue"
+            value="attendTechnicalBusinessMeetings"
+            required
+          />
+          ATTEND TECHNICAL/BUSINESS MEETINGS <br />
+        </div>
+        <div class="col-3"></div>
+      </div>
+
+      <div class="row purpose_row_1">
+        <div class="col-1"></div>
+        <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
+          <input
+            type="radio"
+            name="eBusinessValue"
+            [(ngModel)]="firstForm.eBusinessValue"
+            value="recruitManpower"
+            required
+          />
+          TO RECRUIT MANPOWER <br />
+        </div>
+        <div class="col-3"></div>
+      </div>
+
+      <div class="row purpose_row_1">
+        <div class="col-1"></div>
+        <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
+          <input
+            type="radio"
+            name="eBusinessValue"
+            [(ngModel)]="firstForm.eBusinessValue"
+            value="exhibitionsBusinessTrade"
+            required
+          />
+          PARTICIPATION IN EXHIBITIONS,BUSINESS/TRADE FAIRS <br />
+        </div>
+        <div class="col-3"></div>
+      </div>
+
+      <div class="row purpose_row_1">
+        <div class="col-1"></div>
+        <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
+          <input
+            type="radio"
+            name="eBusinessValue"
+            [(ngModel)]="firstForm.eBusinessValue"
+            value="expertSpecialistInconnection"
+            required
+          />
+          EXPERT/SPECIALIST IN CONNECTION WITH AN ONGOING PROJECT <br />
+        </div>
+        <div class="col-3"></div>
+      </div>
+
+      <div class="row purpose_row_1">
+        <div class="col-1"></div>
+        <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
+          <input
+            type="radio"
+            name="eBusinessValue"
+            [(ngModel)]="firstForm.eBusinessValue"
+            value="consuctionTours"
+            required
+          />
+          CONDUCTING TOURS <br />
+        </div>
+        <div class="col-3"></div>
+      </div>
+
+      <div class="row purpose_row_1">
+        <div class="col-1"></div>
+        <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
+          <input
+            type="radio"
+            name="eBusinessValue"
+            [(ngModel)]="firstForm.eBusinessValue"
+            value="toDeliverLecture"
+            required
+          />
+          TO DELIVER LECTURE/S UNDER GLOBAL INITIATIVE FOR ACADEMIC NETWORKS
+          (GIAN) <br />
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+
+    <input type="hidden" id="purpose_61" value="21" />
+
+    <div class="row">
+      <div class="col-1 " title="Visa Type"></div>
+      <div class="col-2">
+        <input
+          type="checkbox"
+          name="firstForm.eMedicalAttvisa_service"
+          (change)="
+            firstForm.eMedicalAttvisa_service = !firstForm.eMedicalAttvisa_service
+          "
+          [checked]="firstForm.eMedicalAttvisa_service"
+        />eMEDICAL ATTENDANT VISA <br />
+      </div>
+      <div
+        class="col-3 error1"
+        *ngIf="
+          firstForm.eMedicalAttvisa_service && !firstForm.eMedicalAttvisaValue
+        "
+      >
+        Please select purpose for eMEDICAL ATTENDANT VISA
+      </div>
+    </div>
+
+    <div *ngIf="firstForm.eMedicalAttvisa_service">
+      <div class="row purpose_row_61">
+        <div class="col-1"></div>
+        <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
+          <input
+            type="radio"
+            name="eMedicalAttvisaValue"
+            [(ngModel)]="firstForm.eMedicalAttvisaValue"
+            value="toAccompanyPatientTravelling"
+            required
+          />
+          TO ACCOMPANY PATIENT TRAVELLING TO INDIA ON EMEDICAL VISA <br />
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+
+    <input type="hidden" id="purpose_1" />
+
+    <input type="hidden" name="evisa_purpose" id="evisa_purpose" value="" />
+
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-2">
+        <img
+          src="../../assets/images/captcha"
+          id="capt"
+          onload="image_loaded();"
+          style="display: inline"
+        />
+      </div>
+      <div class="col-3">
+        <a
+          href=""
+          onClick="return refreshCaptcha();"
+          style="vertical-align: baseline"
+          ><img
+            src="../../assets/images/refresh.png"
+            style="width:30px;height:30px;display: inline"
+        /></a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div
+        class="col-1 mandatory"
+        id="enter_code"
+        title="Please enter above text"
+      >
+        Please enter above text
+      </div>
+      <div class="col-2">
+        <input
+          type="text"
+          name="captcha"
+          id="captcha"
+          maxlength="20"
+          #captcha="ngModel"
+          [(ngModel)]="firstForm.captcha"
+          required
+        />
+      </div>
+      <div *ngIf="captcha.invalid && (captcha.dirty || captcha.touched)">
+        <div *ngIf="captcha.errors.required" class="col-3">
+          Please enter captcha
+        </div>
+      </div>
+    </div>
+    <div class="row text_center" style="margin-top:0px;">
+      <div
+        id="registration_common_error"
+        style="text-align:center"
+        class="error1"
+      ></div>
+
+      <input type="hidden" value="3" name="appl.visa_type_id" /> <br />
+      <input
+        type="button"
+        class="btn btn-primary"
+        value="Continue"
+        (click)="save()"
+        [disabled]="firstForm.invalid"
+      />
+      <input type="hidden" name="submit_registration" value="Continue" />
+    </div>
+    {{firstForm.value | json}}
+  </form>
+
+  <div style="display: block; clear: both;"></div>
+  <br /><br />
+  <div class="pageHeading1 text_center">e-Visa Application</div>
+</div>
