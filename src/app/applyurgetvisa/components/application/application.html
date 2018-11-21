@@ -895,7 +895,7 @@
         type="button"
         class="btn btn-primary"
         value="Continue"
-        (click)="save()"
+        (click)="save(firstForm.value)"
         [disabled]="firstForm.invalid"
       />
       <input type="hidden" name="submit_registration" value="Continue" />

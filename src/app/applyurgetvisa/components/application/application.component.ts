@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { UserService } from "../../../shared";
+import { UserService, ApiService, ApplicationService } from "../../../shared";
+import { environment } from "../../../../environments/environment";
 
 @Component({
   selector: "application-page",
@@ -8,7 +9,12 @@ import { UserService } from "../../../shared";
   styleUrls: ["../../applyvisa.css"]
 })
 export class ApplicationComponent implements OnInit {
-  constructor(private router: Router, private userService: UserService) {}
+  constructor(
+    private router: Router,
+    private userService: UserService,
+    private apiService: ApiService,
+    private applicationService: ApplicationService
+  ) {}
 
   firstForm = {
     applType: "",
@@ -29,17 +35,24 @@ export class ApplicationComponent implements OnInit {
     eMedicalAttvisa_service: false,
     eMedicalAttvisaValue: null
   };
-  emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+  emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$";
 
   ngOnInit() {}
 
-  save() {
-    this.goToNext();
+  save(data) {
+    const formattedData = this.applicationService.createRequestForStep1(data);
+    this.apiService
+      .post(`${environment.saveApplicationFirstPage}`, formattedData)
+      .subscribe(() => this.goToNext(), () => this.goToNext());
+      //remove goToNext method from error callback in future  
   }
 
   private goToNext() {
     this.router.navigate(["applyvisa/generaldetails"]);
   }
 
-  get diagnostic() { return JSON.stringify(this.firstForm); }
+  //remove in future
+  get diagnostic() {
+    return JSON.stringify(this.firstForm);
+  }
 }
