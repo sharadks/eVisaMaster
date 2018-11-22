@@ -60,7 +60,6 @@ export class AddressDetailsComponent implements OnInit {
   }
 
   save(data){
-    debugger
     const formattedData = this.applicationService.createRequestForStep3(data);
     this.apiService
       .post(`${environment.saveApplicationThirdPage}`, formattedData)
