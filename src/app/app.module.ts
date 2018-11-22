@@ -21,6 +21,7 @@ import {ServicesModule} from './services/services.module';
 import {EligibleCountriesModule} from './eligiblecontries/eligiblecountries.module';
 import {MakePaymentModule} from './makepayment/make-payment.module';
 import {PartialFilledModule} from './partialfilled/partial-filled.module';
+import { FileUploadModule } from "angular-file-uploader";
 
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -72,7 +73,8 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: fals
         ServicesModule,
         EligibleCountriesModule,
         MakePaymentModule,
-        PartialFilledModule
+        PartialFilledModule,
+        FileUploadModule
     ],
     providers: [
         ApiService,

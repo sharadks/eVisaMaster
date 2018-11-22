@@ -10,6 +10,7 @@ import {UploadDocumentComponent} from './components/uploaddocument/uploaddocumet
 import {UploadPhotographComponent} from './components/uploadphotograph/uploadphotograph.component';
 import {VisaSoughtComponent} from './components/visasoughtdetails/visasoughdetails.components';
 import {SharedModule} from '../shared';
+import { FileUploadModule } from "angular-file-uploader";
 
 const applyVisaRouting: ModuleWithProviders = RouterModule.forChild([
     {
@@ -30,7 +31,8 @@ const applyVisaRouting: ModuleWithProviders = RouterModule.forChild([
 @NgModule({
     imports: [
         applyVisaRouting,
-        SharedModule
+        SharedModule,
+        FileUploadModule
     ],
     declarations: [
         ApplyVisaComponent,
