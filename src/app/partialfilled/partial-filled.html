@@ -1,1 +1,35 @@
-<div>i am partial fiiled page</div>
+<div class="form_container rightWrap">
+        <div class="pageHeading text_center">
+            Complete Partially Filled Form
+        </div>
+        <form #partioalForm="ngForm">
+            <div class="form_container">
+            <div class="row">
+                <div class="col-sm-6">
+                        <label>
+                                Temporary Application ID
+                         </label>
+                </div>
+                <div class="col-sm-6">
+                        <input class="form-control"
+                        name="Temporary"
+                        type="text"      
+                        id="temporary_id"
+                        value=""
+                        class=""
+                        #dob="ngModel"
+                        [(ngModel)]="partioalForm.temporary_id"       
+                        />
+                    </div>
+            </div>
+            <div  class="row">
+                <div class="row text_center">
+                            <input type="submit" class="btn btn-primary" value="Complete Partially Filled"  (click)="save(partioalForm.value)" name="submit_registration">
+                        </div>
+    
+            </div>
+            </div>
+            </form>
+        <br /><br />
+      </div>
+      

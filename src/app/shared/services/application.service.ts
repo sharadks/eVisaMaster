@@ -33,4 +33,11 @@ export class ApplicationService {
     // format data as per backend requirement
     return data;
   }
+
+  createRequestForcheckpartialy(data) {
+    // format data as per backend requirement
+    return {
+      page: data.form
+    };
+  }
 }

@@ -1,0 +1,201 @@
+.pageHeading{
+    color: #ffffff;
+    font-family: Arial,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 26px;   
+    border-bottom:1px solid #B7D4E8;    
+    margin:0 auto;
+    background: #DAB9D8;
+}
+.pageHeading1{
+	color: #ffffff;
+	font-family: Arial, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 32px;
+	border-bottom:1px solid #B7D4E8;
+	margin:0 auto;
+	background-color: #DAB9D8;
+}
+
+.form_container{  
+    margin: 7px auto;
+    border: 1px solid rgba(117, 167, 214,0.2);
+    width: 77%;
+    padding-bottom: 3px;
+}
+.global-form{border:1px solid rgba(117, 167, 214,0.2); }
+.col-1{
+    text-align: right;     
+    color: #333538;
+    font-size: 1em;
+    width: 31%;
+    text-align: right;
+}
+.col-2{   
+    width: 31%;
+}
+.col-2 select,.col-32 select{
+    background: none repeat scroll 0% 0% #FFF;
+    /*padding: 3px;
+    margin: 0px 0px 5px 7px;
+    width: 233px;*/
+    border: 1px solid #CCC; border-radius:5px;
+    font-size: 1em;
+    width: 100%; 
+    padding: 7px 0;
+    text-indent: 4px;
+}
+.col-2 input[type="text"] {
+    background: none repeat scroll 0% 0% #FFF;
+    /*padding: 3px 5px;
+    margin: 0px 0px 5px 7px;
+    width: 220px;*/
+    border: 1px solid #CCC; border-radius:5px;   
+    width: 100%; 
+    padding: 7px 0;
+    text-indent: 4px;
+    font-size: 1em;
+}
+.col-3{              
+    width: 31%;
+    text-align: left;
+}
+.mandatory:after{
+    content: '*';
+    color:#B51717;
+}
+/*********/
+.col-11{
+	width:98%;
+	background:#75A7D6;
+	font-size: 1.15em;
+	font-weight: bold;
+	line-height: 32px;
+	height: 32px;
+	color: #FFFFFF;
+	text-align: center;
+}
+/*****/
+.col-21{
+    width:60%;
+    text-align: right;
+}
+.col-22{
+    width:30%;
+    text-align: right;
+}
+/*****/
+.col-31{
+    width:31%;
+    text-align: right;
+    color: #333538;
+    font-size: 1em;
+}
+.col-32{
+    width:31%;
+    text-align: left;
+}
+.col-33{
+    width:31%;
+    text-align: left;
+}
+.col-32 input[type="text"],.col-42 input[type="text"],.col-45 input[type="text"],.col-32 textarea,.col-3a input[type="text"] ,.col-3b input[type="text"],.col-3c input[type="text"],.col-b input[type="text"],.col-d input[type="text"] ,.col-32 input[type="password"] {       
+    background-color: #F4FAFF;
+    border: 1px solid #A4D6FF; border-radius:5px;    
+    width: 80%; 
+    padding: 7px 0;
+    text-indent: 4px;
+    font-size: 1em;
+}
+.col-32 select,.col-42 select,.col-3a select,.col-3b select,.col-3c select{      
+    background-color: #F4FAFF;
+    border: 1px solid #A4D6FF;    
+    width: 80%; 
+    padding: 7px 0;
+    text-indent: 2px; border-radius:5px;   
+    font-size: 1em;
+}
+/*****/
+/** style correspondng to 31 32 33 in which 31 32 are merged ***/
+.col-312{
+    width:64%;
+    text-align: left;
+    color: #333538;
+    font-size: 1.14em;
+    padding-right:12px;
+}
+
+/*** 4 col layout corresping to 31  , 32 and 33 in which 31 and 32 are creating 4 colns instead of 2 */
+.col-3a{
+    width:15%;
+    text-align: left;
+    color: #333538;
+    font-size: 1.14em;
+    padding-right:12px;
+}
+.col-3b{
+    width:14%;
+    text-align: left;
+    color: #333538;
+    font-size: 1.14em;
+    padding-right:10px;
+}
+.col-3c{
+    width:15%;
+    text-align: left;
+    color: #333538;
+    font-size: 1.14em;
+    padding-right:12px;
+}
+.col-3d{
+    width:14%;
+    text-align: left;
+    color: #333538;
+    font-size: 1.14em;
+    padding-right:12px;
+}
+/***** 4 column layout **/
+.col-41{
+    width:12%;
+    text-align: right;
+    color: #333538;
+    font-size: 1.14em;
+}
+.col-42{
+    width:15%;
+    text-align: left;    
+}
+.col-43{
+    width:15%;
+    text-align: left;    
+}
+.col-44{
+    width:12%;
+    text-align: right;
+    color: #333538;
+    font-size: 1.14em;
+}
+.col-45{
+    width:15%;
+    text-align: left; 
+}
+.col-46{
+    width:15%;
+    text-align: left;    
+}
+/**/
+.col-4123{
+    width:42%;
+    text-align: center;
+    font-weight: bold;
+}
+/***** 4 column layout end **/
+.error1{
+    color:red;
+}
+.error_input{
+    border-color:#F4ADAD !important;
+    box-shadow:0px 0px 5px #F4ADAD !important;
+}
