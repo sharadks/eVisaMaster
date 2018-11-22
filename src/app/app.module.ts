@@ -19,6 +19,8 @@ import {PaymentGuidleinsModule} from './payments-guidlines/payment-guidlines.mod
 import {RefundPolicyModule} from './refund-policy/refund-policy.module';
 import {ServicesModule} from './services/services.module';
 import {EligibleCountriesModule} from './eligiblecontries/eligiblecountries.module';
+import {MakePaymentModule} from './makepayment/make-payment.module';
+import {PartialFilledModule} from './partialfilled/partial-filled.module';
 
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -68,9 +70,9 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: fals
         PaymentGuidleinsModule,
         RefundPolicyModule,
         ServicesModule,
-        EligibleCountriesModule
-        
-,
+        EligibleCountriesModule,
+        MakePaymentModule,
+        PartialFilledModule
     ],
     providers: [
         ApiService,
