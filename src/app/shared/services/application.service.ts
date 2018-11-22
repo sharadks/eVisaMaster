@@ -23,4 +23,9 @@ export class ApplicationService {
       api_secrets: null
     };
   }
+  
+  createRequestForStep2(data) {
+    // format data as per backend requirement
+    return data;
+  }
 }

@@ -50,9 +50,4 @@ export class ApplicationComponent implements OnInit {
   private goToNext() {
     this.router.navigate(["applyvisa/generaldetails"]);
   }
-
-  //remove in future
-  get diagnostic() {
-    return JSON.stringify(this.firstForm);
-  }
 }

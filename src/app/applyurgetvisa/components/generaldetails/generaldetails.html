@@ -1316,10 +1316,10 @@
 
         <div class="row">
             <div class="col-312">Have you lived for at least two years in the country where you are applying visa?
-                <input type="radio" name="livedFor2Years" [(ngModel)]="model.livedFor2Years" required style="width:auto;border: none"
-                    value="Y">Yes
-                <input type="radio" name="livedFor2Years" [(ngModel)]="model.livedFor2Years" required style="width:auto;border: none"
-                    value="N">No
+                <input type="radio" name="livedFor2Years" [(ngModel)]="model.livedFor2Years" style="width:auto;border: none"
+                    value="YES">Yes
+                <input type="radio" name="livedFor2Years" [(ngModel)]="model.livedFor2Years" style="width:auto;border: none"
+                    value="NO">No
             </div>
             <div class="col-33"></div>
         </div>
@@ -2507,9 +2507,9 @@
         <div class="row">
             <div class="col-11 text_center" style="background-color:transparent; margin-bottom:20px;">
                 <input name="submit_btn" type="button" class="btn btn-primary" value="Save and Continue"
-                    (click)="save()" [disabled]="model.invalid">
+                    (click)="save(model.value)" [disabled]="model.invalid">
                 <input name="submit_btn" type="button" class="btn btn-primary" value="Save and Temporarily Exit"
-                    title="Save and Register Later" (click)="saveAndExit()" [disabled]="model.invalid">
+                    title="Save and Register Later" (click)="saveAndExit(model.value)" [disabled]="model.invalid">
             </div>
         </div>
     </form>
