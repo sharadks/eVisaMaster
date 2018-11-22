@@ -8,5 +8,7 @@ export const environment = {
     api_url: 'https://conduit.productionready.io/api',
     off_report_path: '/reports/off-report',
     login_path: '/users/login',
-    login_auth_path: '/users/user'
+    login_auth_path: '/users/user',
+    saveApplicationFirstPage: '/Application/InsertFirstForm',
+    saveApplicationSecondPage: '/Application/InsertSecondForm'
 };

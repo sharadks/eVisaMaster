@@ -36,7 +36,8 @@ import {
     UserService,
     ReportService,
     SidebarComponent,
-	BottomComponent
+    BottomComponent,
+    ApplicationService
 } from './shared';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: false});
@@ -78,7 +79,8 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], {useHash: fals
         AuthGuard,
         JwtService,
         UserService,
-        ReportService
+        ReportService,
+        ApplicationService
     ],
     bootstrap: [AppComponent]
 })
