@@ -28,4 +28,9 @@ export class ApplicationService {
     // format data as per backend requirement
     return data;
   }
+  
+  createRequestForStep3(data) {
+    // format data as per backend requirement
+    return data;
+  }
 }

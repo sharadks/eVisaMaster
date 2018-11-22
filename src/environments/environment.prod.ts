@@ -5,5 +5,6 @@ export const environment = {
     login_path: '/users/login',
     login_auth_path: '/users/user',
     saveApplicationFirstPage: '/Application/InsertFirstForm',
-    saveApplicationSecondPage: '/Application/InsertSecondForm'
+    saveApplicationSecondPage: '/Application/InsertSecondForm',
+    saveApplicationThirdPage: '/Application/InsertThirdForm'
 };
