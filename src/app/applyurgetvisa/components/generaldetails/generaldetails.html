@@ -1317,9 +1317,9 @@
         <div class="row">
             <div class="col-312">Have you lived for at least two years in the country where you are applying visa?
                 <input type="radio" name="livedFor2Years" [(ngModel)]="model.livedFor2Years" style="width:auto;border: none"
-                    value="YES">Yes
+                    [value]="true">Yes
                 <input type="radio" name="livedFor2Years" [(ngModel)]="model.livedFor2Years" style="width:auto;border: none"
-                    value="NO">No
+                    [value]="false">No
             </div>
             <div class="col-33"></div>
         </div>
@@ -1372,13 +1372,13 @@
 
         <div class="row">
             <div class="col-312">Any other valid Passport/Identity Certificate(IC) held,
-                <input name="pptHeld" [(ngModel)]="model.pptHeld" required type="radio" value="YES" style="width:auto;border: none">Yes
+                <input name="pptHeld" [(ngModel)]="model.pptHeld" required type="radio" [value]="true" style="width:auto;border: none">Yes
                 <input name="pptHeld" [(ngModel)]="model.pptHeld" required type="radio" style="width:auto;border: none"
-                    value="NO">No
+                    [value]="false">No
             </div>
             <div class="col-33">If Yes Please give Details</div>
         </div>
-        <div *ngIf="model.pptHeld=='YES'">
+        <div *ngIf="model.pptHeld==true">
             <div class="row anyOtherNat">
                 <div class="col-31 mandatory">Country of Issue </div>
                 <div class="col-32">

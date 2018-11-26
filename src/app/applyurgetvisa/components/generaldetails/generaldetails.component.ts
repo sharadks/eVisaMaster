@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {ApiService, UserService, ApplicationService } from '../../../shared';
+import { ApiService, UserService, ApplicationService } from '../../../shared';
 import { environment } from "../../../../environments/environment";
 
 @Component({
@@ -14,7 +14,7 @@ export class GeneralDetailsComponent implements OnInit {
     private userService: UserService,
     private apiService: ApiService,
     private applicationService: ApplicationService
-  ) {}
+  ) { }
 
   model = {
     surname: '',
@@ -46,17 +46,19 @@ export class GeneralDetailsComponent implements OnInit {
 
   ngOnInit() {
   }
-  
-  goToNext (){
+
+  goToNext() {
     this.router.navigate(["applyvisa/addressdetails"]);
   }
 
   save(data) {
-    const formattedData = this.applicationService.createRequestForStep2(data);
-    this.apiService
-      .post(`${environment.saveApplicationSecondPage}`, formattedData)
-      .subscribe(() => this.goToNext(), () => this.goToNext());
-      //remove goToNext method from error callback in future  
+    const apiId = { api_id: '2' };
+    this.apiService.post(`${environment.getSecreteData}`, apiId).subscribe((secretData) => {
+      const formattedData = this.applicationService.createRequestForStep2(data, secretData);
+      this.apiService
+        .post(`${environment.saveApplicationSecondPage}`, formattedData)
+        .subscribe(() => this.goToNext());
+    });
   }
 
   saveAndExit(data) {
