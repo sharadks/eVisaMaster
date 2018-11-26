@@ -14,7 +14,7 @@ export class ApplicationComponent implements OnInit {
     private userService: UserService,
     private apiService: ApiService,
     private applicationService: ApplicationService
-  ) {}
+  ) { }
 
   firstForm = {
     applType: "",
@@ -37,14 +37,16 @@ export class ApplicationComponent implements OnInit {
   };
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$";
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   save(data) {
-    const formattedData = this.applicationService.createRequestForStep1(data);
-    this.apiService
-      .post(`${environment.saveApplicationFirstPage}`, formattedData)
-      .subscribe(() => this.goToNext(), () => this.goToNext());
-      //remove goToNext method from error callback in future  
+    const apiId = { api_id: 1 };
+    const secretData = this.apiService.post(`${environment.getSecreteData}`, apiId).subscribe((secretData) => {
+      const formattedData = this.applicationService.createRequestForStep1(data, secretData);
+      this.apiService
+        .post(`${environment.saveApplicationFirstPage}`, formattedData)
+        .subscribe(() => this.goToNext());
+    });
   }
 
   private goToNext() {
