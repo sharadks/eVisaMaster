@@ -5,7 +5,7 @@ export class ApplicationService {
   constructor(
   ) { }
 
-  createRequestForStep1(data, secretData) {
+  createRequestForStep1(data, secretData, apiId) {
     // format data as per backend requirement
     return {
       application_type: data.applType,
@@ -20,13 +20,13 @@ export class ApplicationService {
       visa_service: null,
       visa_service_type: data.applType,
       temporary_id: null,
-      api_secrets: { api_id: secretData.api_id, api_key: secretData.api_key }
+      api_secrets: { api_id: apiId.api_id, api_key: secretData.api_key }
     };
   }
 
-  createRequestForStep2(data, secretData) {
+  createRequestForStep2(data, secretData, apiId) {
     return {
-      api_secrets: { api_id: secretData.api_id, api_key: secretData.api_key },
+      api_secrets: { api_id: apiId.api_id, api_key: secretData.api_key },
       temporary_id: null,
       surname: data.surname,
       given_name: data.givenName,

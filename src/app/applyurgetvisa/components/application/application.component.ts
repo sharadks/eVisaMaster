@@ -42,7 +42,7 @@ export class ApplicationComponent implements OnInit {
   save(data) {
     const apiId = { api_id: 1 };
     this.apiService.post(`${environment.getSecreteData}`, apiId).subscribe((secretData) => {
-      const formattedData = this.applicationService.createRequestForStep1(data, secretData);
+      const formattedData = this.applicationService.createRequestForStep1(data, secretData, apiId);
       this.apiService
         .post(`${environment.saveApplicationFirstPage}`, formattedData)
         .subscribe(() => this.goToNext());

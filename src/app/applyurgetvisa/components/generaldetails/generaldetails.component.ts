@@ -54,7 +54,7 @@ export class GeneralDetailsComponent implements OnInit {
   save(data) {
     const apiId = { api_id: '2' };
     this.apiService.post(`${environment.getSecreteData}`, apiId).subscribe((secretData) => {
-      const formattedData = this.applicationService.createRequestForStep2(data, secretData);
+      const formattedData = this.applicationService.createRequestForStep2(data, secretData, apiId);
       this.apiService
         .post(`${environment.saveApplicationSecondPage}`, formattedData)
         .subscribe(() => this.goToNext());
