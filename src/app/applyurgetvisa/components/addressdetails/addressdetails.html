@@ -6004,15 +6004,15 @@
         <div class="row">
             <div class="col-312">Are/were you in a Military/Semi-Military/Police/Security. Organization?
                 <input name="militaryPoliceFlag" [(ngModel)]="model.militaryPoliceFlag" type="radio" checked="" style="width:auto;border:none"
-                    value="YES">Yes
+                    [value]="true">Yes
                 <input name="militaryPoliceFlag" [(ngModel)]="model.militaryPoliceFlag" type="radio" style="width:auto;border:none"
-                    value="NO">No
+                    [value]="false">No
             </div> <!-- not in database -->
             <div class="col-33">
                 If yes,give details
             </div>
         </div>
-        <div *ngIf="model.militaryPoliceFlag==='YES'">
+        <div *ngIf="model.militaryPoliceFlag==true">
             <div class="row prev_org_row">
                 <div class="col-31 mandatory">Organization </div>
                 <div class="col-32"><input name="militaryOrg" #militaryOrg="ngModel" [(ngModel)]="model.militaryOrg"

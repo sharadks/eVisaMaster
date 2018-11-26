@@ -57,9 +57,50 @@ export class ApplicationService {
     };
   }
 
-  createRequestForStep3(data) {
-    // format data as per backend requirement
-    return data;
+  createRequestForStep3(data, secretData, apiId) {
+    return {
+      api_secrets: { api_id: apiId.api_id, api_key: secretData.api_key },
+      temporary_id: null,
+      house_street_no: data.pres_houseNo,
+      village_town_city: data.pres_city,
+      state_province_district: data.pres_state,
+      postal_zipcode: data.pres_zip,
+      country: data.pres_country,
+      phone_no: data.phoneNo,
+      mobile_no: data.mobile,
+      phouse_street_no: data.perma_houseNo,
+      pvillage_town_city: data.perma_city,
+      pstate_province_district: data.perma_state,
+      father_name: data.father_name,
+      father_nationality: data.father_nationality,
+      previous_father_nationality: data.father_prev_nationality,
+      father_place_of_birth: data.father_birth_place,
+      father_country_of_birth: data.father_birth_country,
+      mother_name: data.mother_name,
+      previous_mother_nationality: data.mother_nationality,
+      mother_place_of_birth: data.mother_birth_place,
+      mother_country_of_birth: data.mother_birth_country,
+      applicant_marital_status: data.applicant_marital_status,
+      spouse_name: data.spouse_name,
+      spouse_nationality: null,
+      spouse_previous_nationality: null,
+      spouse_place_of_birth: null,
+      spouse_country_of_birth: null,
+      grandparent_belongs_pakistan: data.pakistaniParents,
+      grandparent_belongs_pakistan_details: data.pakistaniParentsDetails,
+      spouse_occupation: data.pres_occupation,
+      spouse_occupation_others: data.pres_occupationOthers,
+      spouse_parent_employer_business: data.pres_employer,
+      spouse_parent_employer_address: data.pres_address,
+      spouse_parent_employer_designation: data.pres_designation,
+      spouse_parent_employer_phone: data.pres_phone,
+      spouse_past_occupation: null,
+      in_security_organization: data.militaryPoliceFlag,
+      security_organization: data.militaryOrg,
+      security_designation: data.militaryDesignation,
+      security_rank: data.militaryRank,
+      security_place_of_posting: data.militaryPlaceOfPosting
+    };
   }
 
   createRequestForcheckpartialy(data) {

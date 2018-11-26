@@ -14,7 +14,7 @@ export class AddressDetailsComponent implements OnInit {
     private userService: UserService,
     private apiService: ApiService,
     private applicationService: ApplicationService
-  ) {}
+  ) { }
 
   model = {
     pres_houseNo: '',
@@ -59,19 +59,21 @@ export class AddressDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  save(data){
-    const formattedData = this.applicationService.createRequestForStep3(data);
-    this.apiService
-      .post(`${environment.saveApplicationThirdPage}`, formattedData)
-      .subscribe(() => this.goToNext(), () => this.goToNext());
-      //remove goToNext method from error callback in future  
+  save(data) {
+    const apiId = { api_id: '3' };
+    this.apiService.post(`${environment.getSecreteData}`, apiId).subscribe((secretData) => {
+      const formattedData = this.applicationService.createRequestForStep3(data, secretData, apiId);
+      this.apiService
+        .post(`${environment.saveApplicationThirdPage}`, formattedData)
+        .subscribe(() => this.goToNext());
+    });
   }
 
-  saveAndExit(data){
+  saveAndExit(data) {
 
   }
 
-  goToNext (){
+  goToNext() {
     this.router.navigate(["applyvisa/visa"]);
   }
 
