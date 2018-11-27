@@ -924,14 +924,17 @@
       ></div>
 
       <input type="hidden" value="3" name="appl.visa_type_id" /> <br />
-      <input
+      <input *ngIf="!firstForm.submitted"
         type="button"
         class="btn btn-primary"
         value="Continue"
-        (click)="save(firstForm.value)"
+        (click)="firstForm.submitted = true; save(firstForm.value)"
         [disabled]="firstForm.invalid"
       />
       <input type="hidden" name="submit_registration" value="Continue" />
+      <div *ngIf="firstForm.submitted" style="text-align: -webkit-center;">
+        <mat-spinner strokeWidth="3" [diameter]="30"></mat-spinner>
+      </div>
     </div>
   </form>
 

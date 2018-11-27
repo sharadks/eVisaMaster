@@ -27,7 +27,8 @@ export class ApplicationComponent implements OnInit {
     journeyDate: null,
     captcha: "",
     eVisaService: null,
-    eVisaServiceType: null
+    eVisaServiceType: null,
+    submitted: false
   };
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$";
 
@@ -39,7 +40,7 @@ export class ApplicationComponent implements OnInit {
       const formattedData = this.applicationService.createRequestForStep1(data, secretData, apiId);
       this.apiService
         .post(`${environment.saveApplicationFirstPage}`, formattedData)
-        .subscribe((response) => this.goToNext(response && response.Action));
+        .subscribe((response) => this.goToNext(response && response.Action),()=>{},()=>{this.firstForm.submitted = false;});
     });
   }
 
