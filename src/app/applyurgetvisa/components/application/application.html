@@ -22,7 +22,7 @@
         </select>
       </div>
       <div *ngIf="applType.errors && applType.touched">
-        <div *ngIf="applType.errors.required" class="col-3">
+        <div *ngIf="applType.errors.required" class="col-3" style="color:#A30B18">
           Please select Application Type
         </div>
       </div>
@@ -54,7 +54,7 @@
       </div>
       <div class="col-3"></div>
       <div *ngIf="pptType.errors && pptType.touched">
-        <div *ngIf="pptType.errors.required" class="col-3">
+        <div *ngIf="pptType.errors.required" class="col-3" style="color:#A30B18">
           Please select Passport Type
         </div>
       </div>
@@ -398,7 +398,7 @@
         </select>
       </div>
       <div *ngIf="nationality.errors && nationality.touched">
-        <div *ngIf="nationality.errors.required" class="col-3">
+        <div *ngIf="nationality.errors.required" class="col-3" style="color:#A30B18">
           Please select Nationality
         </div>
       </div>
@@ -444,7 +444,7 @@
         >
       </div>
       <div *ngIf="portOfArrival.errors && portOfArrival.touched">
-        <div *ngIf="portOfArrival.errors.required" class="col-3">
+        <div *ngIf="portOfArrival.errors.required" class="col-3" style="color:#A30B18">
           Please select Port Of Arrival
         </div>
       </div>
@@ -467,7 +467,7 @@
         />
       </div>
       <div *ngIf="dob.invalid && (dob.dirty || dob.touched)">
-        <div *ngIf="dob.errors.required" class="col-3">
+        <div *ngIf="dob.errors.required" class="col-3" style="color:#A30B18">
           Please enter Date of Birth
         </div>
       </div>
@@ -488,10 +488,10 @@
         />
       </div>
       <div *ngIf="email.invalid && (email.dirty || email.touched)">
-        <div *ngIf="email.errors.required" class="col-3">
+        <div *ngIf="email.errors.required" class="col-3" style="color:#A30B18">
           Please enter Email ID
         </div>
-        <div *ngIf="email.errors.pattern">Email ID is not valid.</div>
+        <div *ngIf="email.errors.pattern" style="color:#A30B18">Email ID is not valid.</div>
       </div>
     </div>
     <div class="row">
@@ -511,10 +511,10 @@
         />
       </div>
       <div *ngIf="email_re.invalid && (email_re.dirty || email_re.touched)">
-        <div *ngIf="email_re.errors.required" class="col-3">
+        <div *ngIf="email_re.errors.required" class="col-3" style="color:#A30B18">
           Please re-enter Email ID
         </div>
-        <div *ngIf="email.errors.pattern">Email ID is not valid.</div>
+        <div *ngIf="email.errors.pattern" style="color:#A30B18">Email ID is not valid.</div>
       </div>
     </div>
     <div class="row">
@@ -540,7 +540,7 @@
           journeyDate.invalid && (journeyDate.dirty || journeyDate.touched)
         "
       >
-        <div *ngIf="journeyDate.errors.required" class="col-3">
+        <div *ngIf="journeyDate.errors.required" class="col-3" style="color:#A30B18">
           Please enter Expected Date of Arrival
         </div>
       </div>
@@ -557,7 +557,7 @@
         />eTOURIST VISA <br />
       </div>
       <div
-        class="col-3 error1"
+        class="col-3" style="color:#A30B18"
         *ngIf="firstForm.eVisaService==='eTOURIST VISA' && !firstForm.eVisaServiceType"
       >
         Please select purpose for eTOURIST VISA
@@ -623,7 +623,7 @@
         />eMEDICAL VISA <br />
       </div>
       <div
-        class="col-3 error1"
+        class="col-3" style="color:#A30B18"
         *ngIf="firstForm.eVisaService==='eMEDICAL VISA' && !firstForm.eVisaServiceType"
       >
         Please select purpose for eMEDICAL VISA
@@ -661,7 +661,7 @@
         />eBUSINESS VISA <br />
       </div>
       <div
-        class="col-3 error1"
+        class="col-3" style="color:#A30B18"
         *ngIf="firstForm.eVisaService==='eBUSINESS VISA' && !firstForm.eVisaServiceType"
       >
         Please select purpose for eBUSINESS VISA
@@ -805,7 +805,7 @@
         />eMEDICAL ATTENDANT VISA <br />
       </div>
       <div
-        class="col-3 error1"
+        class="col-3" style="color:#A30B18"
         *ngIf="firstForm.eVisaService==='eMEDICAL ATTENDANT VISA' && !firstForm.eVisaServiceType"
       >
         Please select purpose for eMEDICAL ATTENDANT VISA
@@ -875,7 +875,7 @@
         />
       </div>
       <div *ngIf="captcha.invalid && (captcha.dirty || captcha.touched)">
-        <div *ngIf="captcha.errors.required" class="col-3">
+        <div *ngIf="captcha.errors.required" class="col-3" style="color:#A30B18">
           Please enter captcha
         </div>
       </div>

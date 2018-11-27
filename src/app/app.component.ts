@@ -11,11 +11,17 @@ export class AppComponent implements  OnInit, OnChanges {
   constructor (private userService: UserService, private router:Router) {
   }
 
+  // This method should be deleted in future.
+  // This behavior should be handled architecturely using components/modules
+  removeSidebarforAllForms() {
+    return !window.location.pathname.includes('applyvisa');
+  }
+
+
   ngOnInit() {
     this.userService.populate();
     this.currentUser = this.userService.getCurrentUser();
     // this.router.navigateByUrl('/' + this.currentUser.landingPage);
-
   }
   ngOnChanges() {
     this.userService.populate();
