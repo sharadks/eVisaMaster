@@ -17,8 +17,8 @@ export class ApplicationService {
       email: data.email,
       exp_date_of_arrival: this.formatDateToDB(data.journeyDate),
       contact_no: null,
-      visa_service: null,
-      visa_service_type: data.applType,
+      visa_service: data.eVisaService,
+      visa_service_type: data.eVisaServiceType,
       temporary_id: null,
       api_secrets: { api_id: apiId.api_id, api_key: secretData.api_key }
     };

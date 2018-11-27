@@ -26,14 +26,8 @@ export class ApplicationComponent implements OnInit {
     email_re: "",
     journeyDate: null,
     captcha: "",
-    eTouristvisa_service: false,
-    etouristValue: null,
-    eMedicalValue_service: false,
-    eMedicalValue: null,
-    eBusinessValue_service: false,
-    eBusinessValue: null,
-    eMedicalAttvisa_service: false,
-    eMedicalAttvisaValue: null
+    eVisaService: null,
+    eVisaServiceType: null
   };
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$";
 
@@ -51,5 +45,9 @@ export class ApplicationComponent implements OnInit {
 
   private goToNext() {
     this.router.navigate(["applyvisa/generaldetails"]);
+  }
+
+  handleVisaServiceChange(e) {
+    this.firstForm.eVisaService = e.target.value; 
   }
 }
