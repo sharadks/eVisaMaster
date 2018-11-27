@@ -50,7 +50,7 @@
             <div class="col-31 mandatory">Country</div>
             <div class="col-32">
                 <select name="pres_country" #pres_country="ngModel" [(ngModel)]="model.pres_country" required>
-                    <option value="">Select Country</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Country</option>
                     <!-- HERE -->
                     <option value="AFG">AFGHANISTAN</option>
                     <!-- HERE -->
@@ -779,7 +779,7 @@
             <div class="col-32">
                 <select name="father_nationality" #father_nationality="ngModel" [(ngModel)]="model.father_nationality"
                     required>
-                    <option value="">Select Nationality</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Nationality</option>
 
                     <option value="AFG">AFGHANISTAN</option>
 
@@ -1322,7 +1322,7 @@
             <div class="col-32">
 
                 <select name="father_prev_nationality" #father_prev_nationality="ngModel" [(ngModel)]="model.father_prev_nationality">
-                    <option value="">Select Nationality</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Nationality</option>
 
                     <option value="AFG">AFGHANISTAN</option>
 
@@ -1872,7 +1872,7 @@
 
                 <select name="father_birth_country" #father_birth_country="ngModel" [(ngModel)]="model.father_birth_country"
                     required>
-                    <option value="">Select Country</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Country</option>
 
                     <option value="AFG">AFGHANISTAN</option>
 
@@ -2433,7 +2433,7 @@
             <div class="col-32">
                 <select name="mother_nationality" #mother_nationality="ngModel" [(ngModel)]="model.mother_nationality"
                     required>
-                    <option value="">Select Nationality</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Nationality</option>
 
                     <option value="AFG">AFGHANISTAN</option>
 
@@ -2977,7 +2977,7 @@
             <div class="col-32">
 
                 <select name="mother_prev_nationality" #mother_prev_nationality="ngModel" [(ngModel)]="model.mother_prev_nationality">
-                    <option value="">Select Nationality</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Nationality</option>
 
                     <option value="AFG">AFGHANISTAN</option>
 
@@ -3527,7 +3527,7 @@
 
                 <select name="mother_birth_country" #mother_birth_country="ngModel" [(ngModel)]="model.mother_birth_country"
                     required>
-                    <option value="">Select Country</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Country</option>
 
                     <option value="AFG">AFGHANISTAN</option>
 
@@ -4077,7 +4077,7 @@
 
                 <select name="applicant_marital_status" #applicant_marital_status="ngModel" [(ngModel)]="model.applicant_marital_status"
                     required>
-                    <option value="">Select Marital Status</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Marital Status</option>
 
                     <option value="0">MARRIED</option>
 
@@ -5762,7 +5762,7 @@
             <div class="col-32">
 
                 <select name="pres_occupation" #pres_occupation="ngModel" [(ngModel)]="model.pres_occupation" required>
-                    <option value="">Select Occupation</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Occupation</option>
 
                     <option value="AIR FORCE">AIR FORCE</option>
 
@@ -5908,7 +5908,7 @@
             <div class="col-32">
 
                 <select name="prev_occupation" #prev_occupation="ngModel" [(ngModel)]="model.prev_occupation" required>
-                    <option value="">Select Occupation</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Occupation</option>
 
                     <option value="AIR FORCE">AIR FORCE</option>
 

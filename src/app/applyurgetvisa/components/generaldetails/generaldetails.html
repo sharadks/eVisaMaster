@@ -69,7 +69,7 @@
             <div class="col-31 mandatory">Gender</div>
             <div class="col-32">
                 <select name="gender" #gender="ngModel" [(ngModel)]="model.gender" required>
-                    <option value="">Select gender</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select gender</option>
                     <option value="M">MALE</option>
                     <option value="F">FEMALE</option>
                     <option value="X">TRANSGENDER</option>
@@ -107,7 +107,7 @@
             <div class="col-32">
 
                 <select name="birthCountry" #birthCountry="ngModel" [(ngModel)]="model.birthCountry" required>
-                    <option value="">Select Country</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Country</option>
 
                     <option value="AFG">AFGHANISTAN</option>
 
@@ -663,7 +663,7 @@
             <div class="col-32">
 
                 <select name="religion" #religion="ngModel" [(ngModel)]="model.religion" required>
-                    <option value="">Select Religion</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Religion</option>
 
                     <option value="BAHAI">BAHAI</option>
 
@@ -717,7 +717,7 @@
 
                 <select name="eduQualification" #eduQualification="ngModel" [(ngModel)]="model.eduQualification"
                     required>
-                    <option value="">Select Education</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Education</option>
 
                     <option value="BELOW MATRICULATION">BELOW MATRICULATION</option>
 
@@ -761,7 +761,7 @@
 
                 <select name="nationalityByBirth" #nationalityByBirth="ngModel" [(ngModel)]="model.nationalityByBirth"
                     required>
-                    <option value="">Select ..</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select ..</option>
                     <option value="BY BIRTH">By Birth</option>
                     <option value="NATURALIZATION">Naturalization</option>
                 </select>

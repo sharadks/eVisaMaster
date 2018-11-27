@@ -14,7 +14,7 @@
           [(ngModel)]="firstForm.applType"
           required
         >
-          <option value="">Select</option>
+          <option [ngValue]="undefined" disabled selected hidden>Select</option>
 
           <option value="Normal Processing (4 to 7 Business Days)">Normal Processing (4 to 7 Business Days)</option>
 
@@ -39,7 +39,7 @@
           [(ngModel)]="firstForm.pptType"
           required
         >
-          <option value="">Select Passport Type</option>
+          <option [ngValue]="undefined" disabled selected hidden>Select Passport Type</option>
 
           <option value="ORDINARY PASSPORT">ORDINARY PASSPORT</option>
 
@@ -70,7 +70,7 @@
           [(ngModel)]="firstForm.nationality"
           required
         >
-          <option value="">Select Nationality</option>
+          <option [ngValue]="undefined" disabled selected hidden>Select Nationality</option>
 
           <option value="ALB">ALBANIA</option>
 
@@ -413,7 +413,7 @@
           #portOfArrival="ngModel"
           [(ngModel)]="firstForm.portOfArrival"
           required
-          ><option value="">Select Port of Arrival</option
+          ><option [ngValue]="undefined" disabled selected hidden>Select Port of Arrival</option
           ><option value="I022">AHMEDABAD AIRPORT</option
           ><option value="I032">AMRITSAR AIRPORT</option
           ><option value="I096">BAGDOGRA AIRPORT</option
