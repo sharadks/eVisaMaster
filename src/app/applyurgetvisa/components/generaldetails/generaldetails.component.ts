@@ -31,6 +31,7 @@ export class GeneralDetailsComponent implements OnInit {
     identificationMarks: '',
     eduQualification: '',
     nationalityByBirth: '',
+    prevNationality: '',
     livedFor2Years: '',
     pptNo: '',
     placeOfIssue: '',
