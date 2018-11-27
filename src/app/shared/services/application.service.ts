@@ -24,10 +24,10 @@ export class ApplicationService {
     };
   }
 
-  createRequestForStep2(data, secretData, apiId) {
+  createRequestForStep2(data, secretData, apiId, temporary_id) {
     return {
       api_secrets: { api_id: apiId.api_id, api_key: secretData.api_key },
-      temporary_id: null,
+      temporary_id: temporary_id,
       surname: data.surname,
       given_name: data.givenName,
       have_changed_name: data.changedName,
@@ -57,10 +57,10 @@ export class ApplicationService {
     };
   }
 
-  createRequestForStep3(data, secretData, apiId) {
+  createRequestForStep3(data, secretData, apiId, temporary_id) {
     return {
       api_secrets: { api_id: apiId.api_id, api_key: secretData.api_key },
-      temporary_id: null,
+      temporary_id: temporary_id,
       house_street_no: data.pres_houseNo,
       village_town_city: data.pres_city,
       state_province_district: data.pres_state,

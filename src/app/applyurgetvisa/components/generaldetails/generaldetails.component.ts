@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService, UserService, ApplicationService } from '../../../shared';
 import { environment } from "../../../../environments/environment";
 
@@ -9,12 +9,16 @@ import { environment } from "../../../../environments/environment";
   styleUrls: ['../../applyvisa.css']
 })
 export class GeneralDetailsComponent implements OnInit {
+  temporary_id: string;
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private userService: UserService,
     private apiService: ApiService,
     private applicationService: ApplicationService
-  ) { }
+  ) {
+    this.temporary_id = this.route.snapshot.queryParamMap.get('id');
+  }
 
   model = {
     surname: '',
@@ -48,17 +52,17 @@ export class GeneralDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  goToNext() {
-    this.router.navigate(["applyvisa/addressdetails"]);
+  goToNext(temporary_id) {
+    this.router.navigate(["applyvisa/addressdetails"], {queryParams: {id: temporary_id}});
   }
 
   save(data) {
     const apiId = { api_id: '2' };
     this.apiService.post(`${environment.getSecreteData}`, apiId).subscribe((secretData) => {
-      const formattedData = this.applicationService.createRequestForStep2(data, secretData, apiId);
+      const formattedData = this.applicationService.createRequestForStep2(data, secretData, apiId, this.temporary_id);
       this.apiService
         .post(`${environment.saveApplicationSecondPage}`, formattedData)
-        .subscribe(() => this.goToNext());
+        .subscribe((response) => this.goToNext(response && response.Action));
     });
   }
 

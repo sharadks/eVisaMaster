@@ -4079,9 +4079,9 @@
                     required>
                     <option [ngValue]="undefined" disabled selected hidden>Select Marital Status</option>
 
-                    <option value="0">MARRIED</option>
+                    <option value="MARRIED">MARRIED</option>
 
-                    <option value="1">SINGLE</option>
+                    <option value="SINGLE">SINGLE</option>
 
                 </select>
             </div>
@@ -5903,7 +5903,7 @@
         </div>
 
         <div class="row">
-            <div class="col-31">Past Occupation, if any</div>
+            <div class="col-31 mandatory">Past Occupation, if any</div>
             <div class="col-32">
 
                 <select name="prev_occupation" #prev_occupation="ngModel" [(ngModel)]="model.prev_occupation" required>

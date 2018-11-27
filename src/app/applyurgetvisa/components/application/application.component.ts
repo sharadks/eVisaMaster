@@ -39,12 +39,12 @@ export class ApplicationComponent implements OnInit {
       const formattedData = this.applicationService.createRequestForStep1(data, secretData, apiId);
       this.apiService
         .post(`${environment.saveApplicationFirstPage}`, formattedData)
-        .subscribe(() => this.goToNext());
+        .subscribe((response) => this.goToNext(response && response.Action));
     });
   }
 
-  private goToNext() {
-    this.router.navigate(["applyvisa/generaldetails"]);
+  private goToNext(temporary_id) {
+    this.router.navigate(["applyvisa/generaldetails"], {queryParams: {id: temporary_id}});
   }
 
   handleVisaServiceChange(e) {
