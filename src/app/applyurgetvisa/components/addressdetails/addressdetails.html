@@ -30,7 +30,7 @@
             <div *ngIf="!(pres_houseNo.invalid && (pres_houseNo.dirty || pres_houseNo.touched))" class="col-33">Applicant's
                 Present Address. Maximum 35 characters (Each Line)</div>
             <div *ngIf="pres_houseNo.invalid && (pres_houseNo.dirty || pres_houseNo.touched)">
-                <div *ngIf="pres_houseNo.errors.required" class="col-33">
+                <div *ngIf="pres_houseNo.errors.required" class="col-33" style="color:#A30B18">
                     Applicant's Present Address is required
                 </div>
             </div>
@@ -39,9 +39,9 @@
             <div class="col-31 mandatory">Village/Town/City</div>
             <div class="col-32"><input name="pres_city" value="" type="text" maxlength="35" #pres_city="ngModel"
                     [(ngModel)]="model.pres_city" required> </div>
-            <div *ngIf="!(pres_city.invalid && (pres_city.dirty || pres_city.touched))" class="col-33">Village/Town/City</div>
+            <!-- <div *ngIf="!(pres_city.invalid && (pres_city.dirty || pres_city.touched))" class="col-33">Village/Town/City</div> -->
             <div *ngIf="pres_city.invalid && (pres_city.dirty || pres_city.touched)">
-                <div *ngIf="pres_city.errors.required" class="col-33">
+                <div *ngIf="pres_city.errors.required" class="col-33" style="color:#A30B18">
                     Village/Town/City is required
                 </div>
             </div>
@@ -50,7 +50,7 @@
             <div class="col-31 mandatory">Country</div>
             <div class="col-32">
                 <select name="pres_country" #pres_country="ngModel" [(ngModel)]="model.pres_country" required>
-                    <option value="">Select Country</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Country</option>
                     <!-- HERE -->
                     <option value="AFG">AFGHANISTAN</option>
                     <!-- HERE -->
@@ -583,7 +583,7 @@
                 </select>
             </div>
             <div *ngIf="pres_country.errors && pres_country.touched">
-                <div *ngIf="pres_country.errors.required" class="col-3">
+                <div *ngIf="pres_country.errors.required" class="col-33" style="color:#A30B18">
                     Country is required
                 </div>
             </div>
@@ -594,7 +594,7 @@
             <div class="col-32"><input name="pres_state" value="" type="text" maxlength="35" #pres_state="ngModel"
                     [(ngModel)]="model.pres_state" required> </div>
             <div *ngIf="pres_state.invalid && (pres_state.dirty || pres_state.touched)">
-                <div *ngIf="pres_state.errors.required" class="col-33">
+                <div *ngIf="pres_state.errors.required" class="col-33" style="color:#A30B18">
                     State/Province/District is required
                 </div>
             </div>
@@ -679,7 +679,7 @@
             <div class="col-32"><input name="pres_zip" value="" type="text" maxlength="15" #pres_zip="ngModel"
                     [(ngModel)]="model.pres_zip" required> </div>
             <div *ngIf="pres_zip.invalid && (pres_zip.dirty || pres_zip.touched)">
-                <div *ngIf="pres_zip.errors.required" class="col-33">
+                <div *ngIf="pres_zip.errors.required" class="col-33" style="color:#A30B18">
                     Postal/Zip Code is required
                 </div>
             </div>
@@ -733,7 +733,7 @@
                 <div *ngIf="!(perma_houseNo.invalid && (perma_houseNo.dirty || perma_houseNo.touched))" class="col-33">Applicant's
                     Permanent Address(with Postal/Zip Code)</div>
                 <div *ngIf="perma_houseNo.invalid && (perma_houseNo.dirty || perma_houseNo.touched)">
-                    <div *ngIf="perma_houseNo.errors.required" class="col-33">
+                    <div *ngIf="perma_houseNo.errors.required" class="col-33"style="color:#A30B18">
                         Applicant's Permanent Address(with Postal/Zip Code) is required
                     </div>
                 </div>
@@ -769,7 +769,7 @@
             <div class="col-32"><input name="father_name" #father_name="ngModel" [(ngModel)]="model.father_name"
                     required type="text" id="fthrname" maxlength="50" value=""> </div>
             <div *ngIf="father_name.invalid && (father_name.dirty || father_name.touched)">
-                <div *ngIf="father_name.errors.required" class="col-33">
+                <div *ngIf="father_name.errors.required" class="col-33" style="color:#A30B18">
                     Applicant's Father Name is required
                 </div>
             </div>
@@ -779,7 +779,7 @@
             <div class="col-32">
                 <select name="father_nationality" #father_nationality="ngModel" [(ngModel)]="model.father_nationality"
                     required>
-                    <option value="">Select Nationality</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Nationality</option>
 
                     <option value="AFG">AFGHANISTAN</option>
 
@@ -1312,7 +1312,7 @@
                 </select>
             </div>
             <div *ngIf="father_nationality.errors && father_nationality.touched">
-                <div *ngIf="father_nationality.errors.required" class="col-33">
+                <div *ngIf="father_nationality.errors.required" class="col-33" style="color:#A30B18">
                     Father's Nationality
                 </div>
             </div>
@@ -1322,7 +1322,7 @@
             <div class="col-32">
 
                 <select name="father_prev_nationality" #father_prev_nationality="ngModel" [(ngModel)]="model.father_prev_nationality">
-                    <option value="">Select Nationality</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Nationality</option>
 
                     <option value="AFG">AFGHANISTAN</option>
 
@@ -1861,7 +1861,7 @@
             <div class="col-32"><input name="father_birth_place" #father_birth_place="ngModel" [(ngModel)]="model.father_birth_place"
                     required maxlength="50" type="text" id="father_place_of_birth" value=""> </div>
             <div *ngIf="father_birth_place.errors && father_birth_place.touched">
-                <div *ngIf="father_birth_place.errors.required" class="col-33">
+                <div *ngIf="father_birth_place.errors.required" class="col-33" style="color:#A30B18">
                     Place of birth
                 </div>
             </div>
@@ -1872,7 +1872,7 @@
 
                 <select name="father_birth_country" #father_birth_country="ngModel" [(ngModel)]="model.father_birth_country"
                     required>
-                    <option value="">Select Country</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Country</option>
 
                     <option value="AFG">AFGHANISTAN</option>
 
@@ -2405,7 +2405,7 @@
                 </select>
             </div>
             <div *ngIf="father_birth_country.errors && father_birth_country.touched">
-                <div *ngIf="father_birth_country.errors.required" class="col-33">
+                <div *ngIf="father_birth_country.errors.required" class="col-33" style="color:#A30B18">
                     Country of birth is required
                 </div>
             </div>
@@ -2423,7 +2423,7 @@
                     required maxlength="50" value="">
             </div>
             <div *ngIf="mother_name.invalid && (mother_name.dirty || mother_name.touched)">
-                <div *ngIf="mother_name.errors.required" class="col-33">
+                <div *ngIf="mother_name.errors.required" class="col-33" style="color:#A30B18">
                     Applicant's Mother Name is required
                 </div>
             </div>
@@ -2433,7 +2433,7 @@
             <div class="col-32">
                 <select name="mother_nationality" #mother_nationality="ngModel" [(ngModel)]="model.mother_nationality"
                     required>
-                    <option value="">Select Nationality</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Nationality</option>
 
                     <option value="AFG">AFGHANISTAN</option>
 
@@ -2967,7 +2967,7 @@
             </div>
             <div class="col-33"></div>
             <div *ngIf="mother_nationality.errors && mother_nationality.touched">
-                <div *ngIf="mother_nationality.errors.required" class="col-33">
+                <div *ngIf="mother_nationality.errors.required" class="col-33" style="color:#A30B18">
                     Mother's Nationality is required
                 </div>
             </div>
@@ -2977,7 +2977,7 @@
             <div class="col-32">
 
                 <select name="mother_prev_nationality" #mother_prev_nationality="ngModel" [(ngModel)]="model.mother_prev_nationality">
-                    <option value="">Select Nationality</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Nationality</option>
 
                     <option value="AFG">AFGHANISTAN</option>
 
@@ -3516,7 +3516,7 @@
             <div class="col-32"><input name="mother_birth_place" maxlength="50" type="text" #mother_birth_place="ngModel"
                     [(ngModel)]="model.mother_birth_place" required value=""> </div>
             <div *ngIf="mother_birth_place.invalid && (mother_birth_place.dirty || mother_birth_place.touched)">
-                <div *ngIf="mother_birth_place.errors.required" class="col-33">
+                <div *ngIf="mother_birth_place.errors.required" class="col-33" style="color:#A30B18">
                     Place of birth is required
                 </div>
             </div>
@@ -3527,7 +3527,7 @@
 
                 <select name="mother_birth_country" #mother_birth_country="ngModel" [(ngModel)]="model.mother_birth_country"
                     required>
-                    <option value="">Select Country</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Country</option>
 
                     <option value="AFG">AFGHANISTAN</option>
 
@@ -4060,7 +4060,7 @@
                 </select>
             </div>
             <div *ngIf="mother_birth_country.errors && mother_birth_country.touched">
-                <div *ngIf="mother_birth_country.errors.required" class="col-33">
+                <div *ngIf="mother_birth_country.errors.required" class="col-33" style="color:#A30B18">
                     Country of birth is required
                 </div>
             </div>
@@ -4077,16 +4077,16 @@
 
                 <select name="applicant_marital_status" #applicant_marital_status="ngModel" [(ngModel)]="model.applicant_marital_status"
                     required>
-                    <option value="">Select Marital Status</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Marital Status</option>
 
-                    <option value="0">MARRIED</option>
+                    <option value="MARRIED">MARRIED</option>
 
-                    <option value="1">SINGLE</option>
+                    <option value="SINGLE">SINGLE</option>
 
                 </select>
             </div>
             <div *ngIf="applicant_marital_status.errors && applicant_marital_status.touched">
-                <div *ngIf="applicant_marital_status.errors.required" class="col-33">
+                <div *ngIf="applicant_marital_status.errors.required" class="col-33" style="color:#A30B18">
                     Applicant´s Maritial Status is required
                 </div>
             </div>
@@ -5745,7 +5745,7 @@
             <div class="col-32"><input name="pakistaniParentsDetails" #pakistaniParentsDetails="ngModel" [(ngModel)]="model.pakistaniParentsDetails"
                     required maxlength="50" type="text" value=""> </div>
             <div *ngIf="pakistaniParentsDetails.errors && pakistaniParentsDetails.touched">
-                <div *ngIf="pakistaniParentsDetails.errors.required" class="col-33">
+                <div *ngIf="pakistaniParentsDetails.errors.required" class="col-33" style="color:#A30B18">
                     Details are required
                 </div>
             </div>
@@ -5762,7 +5762,7 @@
             <div class="col-32">
 
                 <select name="pres_occupation" #pres_occupation="ngModel" [(ngModel)]="model.pres_occupation" required>
-                    <option value="">Select Occupation</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Occupation</option>
 
                     <option value="AIR FORCE">AIR FORCE</option>
 
@@ -5848,7 +5848,7 @@
             <div *ngIf="!(pres_occupation.invalid && (pres_occupation.dirty || pres_occupation.touched))" class="col-33">If
                 Others,please specify</div>
             <div *ngIf="pres_occupation.invalid && (pres_occupation.dirty || pres_occupation.touched)">
-                <div *ngIf="pres_occupation.errors.required" class="col-33">
+                <div *ngIf="pres_occupation.errors.required" class="col-33" style="color:#A30B18">
                     Occupation detail is required
                 </div>
             </div>
@@ -5873,7 +5873,7 @@
             <div class="col-32"><input name="pres_employer" #pres_employer="ngModel" [(ngModel)]="model.pres_employer"
                     required maxlength="50" type="text" id="empname" value=""> </div>
             <div *ngIf="pres_employer.invalid && (pres_employer.dirty || pres_employer.touched)">
-                <div *ngIf="pres_employer.errors.required" class="col-33">
+                <div *ngIf="pres_employer.errors.required" class="col-33" style="color:#A30B18">
                     Employer Name / Business is required
                 </div>
             </div>
@@ -5890,9 +5890,8 @@
             <div class="col-32"><input name="pres_address" #pres_address="ngModel" [(ngModel)]="model.pres_address"
                     required maxlength="50" type="text" value="">
             </div>
-            <div class="col-33">Address</div>
             <div *ngIf="pres_address.invalid && (pres_address.dirty || pres_address.touched)">
-                <div *ngIf="pres_address.errors.required" class="col-33">
+                <div *ngIf="pres_address.errors.required" class="col-33" style="color:#A30B18">
                     Address is required
                 </div>
             </div>
@@ -5904,11 +5903,11 @@
         </div>
 
         <div class="row">
-            <div class="col-31">Past Occupation, if any</div>
+            <div class="col-31 mandatory">Past Occupation, if any</div>
             <div class="col-32">
 
                 <select name="prev_occupation" #prev_occupation="ngModel" [(ngModel)]="model.prev_occupation" required>
-                    <option value="">Select Occupation</option>
+                    <option [ngValue]="undefined" disabled selected hidden>Select Occupation</option>
 
                     <option value="AIR FORCE">AIR FORCE</option>
 
@@ -5993,10 +5992,10 @@
                     #prev_occupationOthers="ngModel" [(ngModel)]="model.prev_occupationOthers" required value="">
                 <!-- confirm this first -->
             </div>
-            <div *ngIf="!(prev_occupation.invalid && (prev_occupation.dirty || prev_occupation.touched))" class="col-33">Past
-                Occupation, if any</div>
+            <!-- <div *ngIf="!(prev_occupation.invalid && (prev_occupation.dirty || prev_occupation.touched))" class="col-33">Past
+                Occupation, if any</div> -->
             <div *ngIf="prev_occupation.invalid && (prev_occupation.dirty || prev_occupation.touched)">
-                <div *ngIf="prev_occupation.errors.required" class="col-33">
+                <div *ngIf="prev_occupation.errors.required" class="col-33" style="color:#A30B18">
                     Occupation detail is required
                 </div>
             </div>
@@ -6004,21 +6003,21 @@
         <div class="row">
             <div class="col-312">Are/were you in a Military/Semi-Military/Police/Security. Organization?
                 <input name="militaryPoliceFlag" [(ngModel)]="model.militaryPoliceFlag" type="radio" checked="" style="width:auto;border:none"
-                    value="YES">Yes
+                    [value]="true">Yes
                 <input name="militaryPoliceFlag" [(ngModel)]="model.militaryPoliceFlag" type="radio" style="width:auto;border:none"
-                    value="NO">No
+                    [value]="false">No
             </div> <!-- not in database -->
             <div class="col-33">
-                If yes,give details
+                If yes, give details
             </div>
         </div>
-        <div *ngIf="model.militaryPoliceFlag==='YES'">
+        <div *ngIf="model.militaryPoliceFlag==true">
             <div class="row prev_org_row">
                 <div class="col-31 mandatory">Organization </div>
                 <div class="col-32"><input name="militaryOrg" #militaryOrg="ngModel" [(ngModel)]="model.militaryOrg"
                         required maxlength="50" type="text" id="previous_organization" value=""> </div>
                 <div *ngIf="militaryOrg.invalid && (militaryOrg.dirty || militaryOrg.touched)">
-                    <div *ngIf="militaryOrg.errors.required" class="col-33">
+                    <div *ngIf="militaryOrg.errors.required" class="col-33" style="color:#A30B18">
                         Organization is required
                     </div>
                 </div>
@@ -6029,7 +6028,7 @@
                 <div class="col-32"><input name="militaryDesignation" #militaryDesignation="ngModel" [(ngModel)]="model.militaryDesignation"
                         required maxlength="50" type="text" id="previous_designation" value=""> </div>
                 <div *ngIf="militaryDesignation.invalid && (militaryDesignation.dirty || militaryDesignation.touched)">
-                    <div *ngIf="militaryDesignation.errors.required" class="col-33">
+                    <div *ngIf="militaryDesignation.errors.required" class="col-33" style="color:#A30B18">
                         Designation is required
                     </div>
                 </div>
@@ -6041,7 +6040,7 @@
                         required maxlength="50" type="text" id="previous_rank" value="">
                 </div>
                 <div *ngIf="militaryRank.invalid && (militaryRank.dirty || militaryRank.touched)">
-                    <div *ngIf="militaryRank.errors.required" class="col-33">
+                    <div *ngIf="militaryRank.errors.required" class="col-33" style="color:#A30B18">
                         Rank is required
                     </div>
                 </div>
@@ -6051,7 +6050,7 @@
                 <div class="col-32"><input name="militaryPlaceOfPosting" #militaryPlaceOfPosting="ngModel" [(ngModel)]="model.militaryPlaceOfPosting"
                         required maxlength="50" type="text" id="previous_posting" value=""> </div>
                 <div *ngIf="militaryPlaceOfPosting.invalid && (militaryPlaceOfPosting.dirty || militaryPlaceOfPosting.touched)">
-                    <div *ngIf="militaryPlaceOfPosting.errors.required" class="col-33">
+                    <div *ngIf="militaryPlaceOfPosting.errors.required" class="col-33" style="color:#A30B18">
                         Place of Posting is required
                     </div>
                 </div>

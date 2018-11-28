@@ -7,5 +7,6 @@ export const environment = {
     saveApplicationFirstPage: '/Application/InsertFirstForm',
     saveApplicationSecondPage: '/Application/InsertSecondForm',
     saveApplicationThirdPage: '/Application/InsertThirdForm',
-    Getfromno : '/Application/Getfromno'
+    Getfromno : '/Application/Getfromno',
+    getSecreteData : '/Application/GetCredentials'
 };

@@ -14,16 +14,16 @@
           [(ngModel)]="firstForm.applType"
           required
         >
-          <option value="">Select</option>
+          <option [ngValue]="undefined" disabled selected hidden>Select</option>
 
-          <option value="1">Normal Processing (4 to 7 Business Days)</option>
+          <option value="Normal Processing (4 to 7 Business Days)">Normal Processing (4 to 7 Business Days)</option>
 
-          <option value="2">Urgent Processing (8 to 24 Business Hours) </option>
+          <option value="Urgent Processing (8 to 24 Business Hours)">Urgent Processing (8 to 24 Business Hours)</option>
         </select>
       </div>
       <div *ngIf="applType.errors && applType.touched">
-        <div *ngIf="applType.errors.required" class="col-3">
-          Please select Applicatio Type
+        <div *ngIf="applType.errors.required" class="col-3" style="color:#A30B18">
+          Please select Application Type
         </div>
       </div>
     </div>
@@ -39,22 +39,22 @@
           [(ngModel)]="firstForm.pptType"
           required
         >
-          <option value="">Select Passport Type</option>
+          <option [ngValue]="undefined" disabled selected hidden>Select Passport Type</option>
 
-          <option value="1">ORDINARY PASSPORT</option>
+          <option value="ORDINARY PASSPORT">ORDINARY PASSPORT</option>
 
-          <option value="2">OFFICIAL PASSPORT</option>
+          <option value="OFFICIAL PASSPORT">OFFICIAL PASSPORT</option>
 
-          <option value="3">DIPLOMATIC PASSPORT</option>
+          <option value="DIPLOMATIC PASSPORT">DIPLOMATIC PASSPORT</option>
 
-          <option value="7">SERVICE PASSPORT</option>
+          <option value="SERVICE PASSPORT">SERVICE PASSPORT</option>
 
-          <option value="8">SPECIAL PASSPORT</option>
+          <option value="SPECIAL PASSPORT">SPECIAL PASSPORT</option>
         </select>
       </div>
       <div class="col-3"></div>
       <div *ngIf="pptType.errors && pptType.touched">
-        <div *ngIf="pptType.errors.required" class="col-3">
+        <div *ngIf="pptType.errors.required" class="col-3" style="color:#A30B18">
           Please select Passport Type
         </div>
       </div>
@@ -70,7 +70,7 @@
           [(ngModel)]="firstForm.nationality"
           required
         >
-          <option value="">Select Nationality</option>
+          <option [ngValue]="undefined" disabled selected hidden>Select Nationality</option>
 
           <option value="ALB">ALBANIA</option>
 
@@ -398,7 +398,7 @@
         </select>
       </div>
       <div *ngIf="nationality.errors && nationality.touched">
-        <div *ngIf="nationality.errors.required" class="col-3">
+        <div *ngIf="nationality.errors.required" class="col-3" style="color:#A30B18">
           Please select Nationality
         </div>
       </div>
@@ -413,7 +413,7 @@
           #portOfArrival="ngModel"
           [(ngModel)]="firstForm.portOfArrival"
           required
-          ><option value="">Select Port of Arrival</option
+          ><option [ngValue]="undefined" disabled selected hidden>Select Port of Arrival</option
           ><option value="I022">AHMEDABAD AIRPORT</option
           ><option value="I032">AMRITSAR AIRPORT</option
           ><option value="I096">BAGDOGRA AIRPORT</option
@@ -444,7 +444,7 @@
         >
       </div>
       <div *ngIf="portOfArrival.errors && portOfArrival.touched">
-        <div *ngIf="portOfArrival.errors.required" class="col-3">
+        <div *ngIf="portOfArrival.errors.required" class="col-3" style="color:#A30B18">
           Please select Port Of Arrival
         </div>
       </div>
@@ -467,7 +467,7 @@
         />
       </div>
       <div *ngIf="dob.invalid && (dob.dirty || dob.touched)">
-        <div *ngIf="dob.errors.required" class="col-3">
+        <div *ngIf="dob.errors.required" class="col-3" style="color:#A30B18">
           Please enter Date of Birth
         </div>
       </div>
@@ -488,10 +488,10 @@
         />
       </div>
       <div *ngIf="email.invalid && (email.dirty || email.touched)">
-        <div *ngIf="email.errors.required" class="col-3">
+        <div *ngIf="email.errors.required" class="col-3" style="color:#A30B18">
           Please enter Email ID
         </div>
-        <div *ngIf="email.errors.pattern">Email ID is not valid.</div>
+        <div *ngIf="email.errors.pattern" style="color:#A30B18">Email ID is not valid.</div>
       </div>
     </div>
     <div class="row">
@@ -511,10 +511,10 @@
         />
       </div>
       <div *ngIf="email_re.invalid && (email_re.dirty || email_re.touched)">
-        <div *ngIf="email_re.errors.required" class="col-3">
+        <div *ngIf="email_re.errors.required" class="col-3" style="color:#A30B18">
           Please re-enter Email ID
         </div>
-        <div *ngIf="email.errors.pattern">Email ID is not valid.</div>
+        <div *ngIf="email.errors.pattern" style="color:#A30B18">Email ID is not valid.</div>
       </div>
     </div>
     <div class="row">
@@ -540,7 +540,7 @@
           journeyDate.invalid && (journeyDate.dirty || journeyDate.touched)
         "
       >
-        <div *ngIf="journeyDate.errors.required" class="col-3">
+        <div *ngIf="journeyDate.errors.required" class="col-3" style="color:#A30B18">
           Please enter Expected Date of Arrival
         </div>
       </div>
@@ -549,30 +549,29 @@
       <div class="col-1 mandatory" title="Visa Type">Visa Service</div>
       <div class="col-2">
         <input
-          type="checkbox"
-          name="firstForm.eTouristvisa_service"
-          (change)="
-            firstForm.eTouristvisa_service = !firstForm.eTouristvisa_service
-          "
-          [checked]="firstForm.eTouristvisa_service"
+          type="radio"
+          name="eVisaService"
+          [(ngModel)]="firstForm.eVisaService"
+          (change)="firstForm.eVisaServiceType = '';handleVisaServiceChange($event)"
+          value="eTOURIST VISA"
         />eTOURIST VISA <br />
       </div>
       <div
-        class="col-3 error1"
-        *ngIf="firstForm.eTouristvisa_service && !firstForm.etouristValue"
+        class="col-3" style="color:#A30B18"
+        *ngIf="firstForm.eVisaService==='eTOURIST VISA' && !firstForm.eVisaServiceType"
       >
         Please select purpose for eTOURIST VISA
       </div>
     </div>
-    <div *ngIf="firstForm.eTouristvisa_service">
+    <div *ngIf="firstForm.eVisaService==='eTOURIST VISA'">
       <div class="row purpose_row_3">
         <div class="col-1"></div>
         <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
           <input
             type="radio"
-            name="etouristValue"
-            [(ngModel)]="firstForm.etouristValue"
-            value="recreation"
+            name="eVisaServiceType"
+            [(ngModel)]="firstForm.eVisaServiceType"
+            value="RECREATION/SIGHT-SEEING"
             required
           />
           RECREATION/SIGHT-SEEING <br />
@@ -584,9 +583,9 @@
         <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
           <input
             type="radio"
-            name="etouristValue"
-            [(ngModel)]="firstForm.etouristValue"
-            value="meetingfriends"
+            name="eVisaServiceType"
+            [(ngModel)]="firstForm.eVisaServiceType"
+            value="MEETING FRIENDS/RELATIVES"
             required
           />
           MEETING FRIENDS/RELATIVES <br />
@@ -599,9 +598,9 @@
         <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
           <input
             type="radio"
-            name="etouristValue"
-            [(ngModel)]="firstForm.etouristValue"
-            value="shorttermyoga"
+            name="eVisaServiceType"
+            [(ngModel)]="firstForm.eVisaServiceType"
+            value="SHORT TERM YOGA PROGRAMME"
             required
           />
           SHORT TERM YOGA PROGRAMME <br />
@@ -615,32 +614,31 @@
     <div class="row">
       <div class="col-1 " title="Visa Type"></div>
       <div class="col-2">
-        <input
-          type="checkbox"
-          name="firstForm.eMedicalValue_service"
-          (change)="
-            firstForm.eMedicalValue_service = !firstForm.eMedicalValue_service
-          "
-          [checked]="firstForm.eMedicalValue_service"
+          <input
+          type="radio"
+          name="eVisaService"
+          [(ngModel)]="firstForm.eVisaService"
+          (change)="firstForm.eVisaServiceType = '';handleVisaServiceChange($event)"
+          value="eMEDICAL VISA"
         />eMEDICAL VISA <br />
       </div>
       <div
-        class="col-3 error1"
-        *ngIf="firstForm.eMedicalValue_service && !firstForm.eMedicalValue"
+        class="col-3" style="color:#A30B18"
+        *ngIf="firstForm.eVisaService==='eMEDICAL VISA' && !firstForm.eVisaServiceType"
       >
         Please select purpose for eMEDICAL VISA
       </div>
     </div>
 
-    <div *ngIf="firstForm.eMedicalValue_service">
+    <div *ngIf="firstForm.eVisaService==='eMEDICAL VISA'">
       <div class="row purpose_row_16">
         <div class="col-1"></div>
         <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
           <input
             type="radio"
-            name="eMedicalValue"
-            [(ngModel)]="firstForm.eMedicalValue"
-            value="shortTermMedicalTreat"
+            name="eVisaServiceType"
+            [(ngModel)]="firstForm.eVisaServiceType"
+            value="SHORT TERM MEDICAL TREATMENT OF SELF"
             required
           />
           SHORT TERM MEDICAL TREATMENT OF SELF <br />
@@ -654,32 +652,31 @@
     <div class="row">
       <div class="col-1 " title="Visa Type"></div>
       <div class="col-2">
-        <input
-          type="checkbox"
-          name="firstForm.eBusinessValue_service"
-          (change)="
-            firstForm.eBusinessValue_service = !firstForm.eBusinessValue_service
-          "
-          [checked]="firstForm.eBusinessValue_service"
+          <input
+          type="radio"
+          name="eVisaService"
+          [(ngModel)]="firstForm.eVisaService"
+          (change)="firstForm.eVisaServiceType = '';handleVisaServiceChange($event)"
+          value="eBUSINESS VISA"
         />eBUSINESS VISA <br />
       </div>
       <div
-        class="col-3 error1"
-        *ngIf="firstForm.eBusinessValue_service && !firstForm.eBusinessValue"
+        class="col-3" style="color:#A30B18"
+        *ngIf="firstForm.eVisaService==='eBUSINESS VISA' && !firstForm.eVisaServiceType"
       >
         Please select purpose for eBUSINESS VISA
       </div>
     </div>
 
-    <div *ngIf="firstForm.eBusinessValue_service">
+    <div *ngIf="firstForm.eVisaService==='eBUSINESS VISA'">
       <div class="row purpose_row_1">
         <div class="col-1"></div>
         <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
           <input
             type="radio"
-            name="eBusinessValue"
-            [(ngModel)]="firstForm.eBusinessValue"
-            value="industrialBusiness"
+            name="eVisaServiceType"
+            [(ngModel)]="firstForm.eVisaServiceType"
+            value="TO SET UP INDUSTRIAL/BUSINESS VENTURE"
             required
           />
           TO SET UP INDUSTRIAL/BUSINESS VENTURE <br />
@@ -692,9 +689,9 @@
         <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
           <input
             type="radio"
-            name="eBusinessValue"
-            [(ngModel)]="firstForm.eBusinessValue"
-            value="salePurchaseTrade"
+            name="eVisaServiceType"
+            [(ngModel)]="firstForm.eVisaServiceType"
+            value="SALE/PURCHASE/TRADE"
             required
           />
           SALE/PURCHASE/TRADE <br />
@@ -707,9 +704,9 @@
         <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
           <input
             type="radio"
-            name="eBusinessValue"
-            [(ngModel)]="firstForm.eBusinessValue"
-            value="attendTechnicalBusinessMeetings"
+            name="eVisaServiceType"
+            [(ngModel)]="firstForm.eVisaServiceType"
+            value="ATTEND TECHNICAL/BUSINESS MEETINGS"
             required
           />
           ATTEND TECHNICAL/BUSINESS MEETINGS <br />
@@ -722,9 +719,9 @@
         <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
           <input
             type="radio"
-            name="eBusinessValue"
-            [(ngModel)]="firstForm.eBusinessValue"
-            value="recruitManpower"
+            name="eVisaServiceType"
+            [(ngModel)]="firstForm.eVisaServiceType"
+            value="TO RECRUIT MANPOWER"
             required
           />
           TO RECRUIT MANPOWER <br />
@@ -737,9 +734,9 @@
         <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
           <input
             type="radio"
-            name="eBusinessValue"
-            [(ngModel)]="firstForm.eBusinessValue"
-            value="exhibitionsBusinessTrade"
+            name="eVisaServiceType"
+            [(ngModel)]="firstForm.eVisaServiceType"
+            value="PARTICIPATION IN EXHIBITIONS,BUSINESS/TRADE FAIRS"
             required
           />
           PARTICIPATION IN EXHIBITIONS,BUSINESS/TRADE FAIRS <br />
@@ -752,9 +749,9 @@
         <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
           <input
             type="radio"
-            name="eBusinessValue"
-            [(ngModel)]="firstForm.eBusinessValue"
-            value="expertSpecialistInconnection"
+            name="eVisaServiceType"
+            [(ngModel)]="firstForm.eVisaServiceType"
+            value="EXPERT/SPECIALIST IN CONNECTION WITH AN ONGOING PROJECT"
             required
           />
           EXPERT/SPECIALIST IN CONNECTION WITH AN ONGOING PROJECT <br />
@@ -767,9 +764,9 @@
         <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
           <input
             type="radio"
-            name="eBusinessValue"
-            [(ngModel)]="firstForm.eBusinessValue"
-            value="consuctionTours"
+            name="eVisaServiceType"
+            [(ngModel)]="firstForm.eVisaServiceType"
+            value="CONDUCTING TOURS"
             required
           />
           CONDUCTING TOURS <br />
@@ -782,9 +779,9 @@
         <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
           <input
             type="radio"
-            name="eBusinessValue"
-            [(ngModel)]="firstForm.eBusinessValue"
-            value="toDeliverLecture"
+            name="eVisaServiceType"
+            [(ngModel)]="firstForm.eVisaServiceType"
+            value="TO DELIVER LECTURE/S UNDER GLOBAL INITIATIVE FOR ACADEMIC NETWORKS (GIAN)"
             required
           />
           TO DELIVER LECTURE/S UNDER GLOBAL INITIATIVE FOR ACADEMIC NETWORKS
@@ -799,34 +796,67 @@
     <div class="row">
       <div class="col-1 " title="Visa Type"></div>
       <div class="col-2">
-        <input
-          type="checkbox"
-          name="firstForm.eMedicalAttvisa_service"
-          (change)="
-            firstForm.eMedicalAttvisa_service = !firstForm.eMedicalAttvisa_service
-          "
-          [checked]="firstForm.eMedicalAttvisa_service"
-        />eMEDICAL ATTENDANT VISA <br />
+          <input
+          type="radio"
+          name="eVisaService"
+          [(ngModel)]="firstForm.eVisaService"
+          (change)="firstForm.eVisaServiceType = '';handleVisaServiceChange($event)"
+          value="eCONFERENCE VISA"
+        />eCONFERENCE VISA <br />
       </div>
       <div
-        class="col-3 error1"
-        *ngIf="
-          firstForm.eMedicalAttvisa_service && !firstForm.eMedicalAttvisaValue
-        "
+        class="col-3" style="color:#A30B18"
+        *ngIf="firstForm.eVisaService==='eCONFERENCE VISA' && !firstForm.eVisaServiceType"
       >
-        Please select purpose for eMEDICAL ATTENDANT VISA
+        Please select purpose for eCONFERENCE VISA
       </div>
     </div>
 
-    <div *ngIf="firstForm.eMedicalAttvisa_service">
+    <div *ngIf="firstForm.eVisaService==='eCONFERENCE VISA'">
       <div class="row purpose_row_61">
         <div class="col-1"></div>
         <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
           <input
             type="radio"
-            name="eMedicalAttvisaValue"
-            [(ngModel)]="firstForm.eMedicalAttvisaValue"
-            value="toAccompanyPatientTravelling"
+            name="eVisaServiceType"
+            [(ngModel)]="firstForm.eVisaServiceType"
+            value="TO ATTEND A CONFERENCE/SEMINAR/WORKSHOP ORGANIZED BY A MINISTRY OR DEPARTMENT OF THE GOVERNMENT OF INDIA,STATE GOVERNMENTS OR UT ADMINISTRATIONS AND THEIR SUBORDINATE/ ATTACHED ORGANIZATIONS AND PSUS"
+            required
+          />
+          TO ATTEND A CONFERENCE/SEMINAR/WORKSHOP ORGANIZED BY A MINISTRY OR DEPARTMENT OF THE GOVERNMENT OF INDIA,STATE GOVERNMENTS OR UT ADMINISTRATIONS AND THEIR SUBORDINATE/ ATTACHED ORGANIZATIONS AND PSUS <br />
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+      
+    <div class="row">
+      <div class="col-1 " title="Visa Type"></div>
+      <div class="col-2">
+          <input
+          type="radio"
+          name="eVisaService"
+          [(ngModel)]="firstForm.eVisaService"
+          (change)="firstForm.eVisaServiceType = '';handleVisaServiceChange($event)"
+          value="eMEDICAL ATTENDANT VISA"
+        />eMEDICAL ATTENDANT VISA <br />
+      </div>
+      <div
+        class="col-3" style="color:#A30B18"
+        *ngIf="firstForm.eVisaService==='eMEDICAL ATTENDANT VISA' && !firstForm.eVisaServiceType"
+      >
+        Please select purpose for eMEDICAL ATTENDANT VISA
+      </div>
+    </div>
+
+    <div *ngIf="firstForm.eVisaService==='eMEDICAL ATTENDANT VISA'">
+      <div class="row purpose_row_61">
+        <div class="col-1"></div>
+        <div class="col-2" style="width:50%;color:#0D477C;margin-left: 30px;">
+          <input
+            type="radio"
+            name="eVisaServiceType"
+            [(ngModel)]="firstForm.eVisaServiceType"
+            value="TO ACCOMPANY PATIENT TRAVELLING TO INDIA ON EMEDICAL VISA"
             required
           />
           TO ACCOMPANY PATIENT TRAVELLING TO INDIA ON EMEDICAL VISA <br />
@@ -881,7 +911,7 @@
         />
       </div>
       <div *ngIf="captcha.invalid && (captcha.dirty || captcha.touched)">
-        <div *ngIf="captcha.errors.required" class="col-3">
+        <div *ngIf="captcha.errors.required" class="col-3" style="color:#A30B18">
           Please enter captcha
         </div>
       </div>
@@ -894,14 +924,17 @@
       ></div>
 
       <input type="hidden" value="3" name="appl.visa_type_id" /> <br />
-      <input
+      <input *ngIf="!firstForm.submitted"
         type="button"
         class="btn btn-primary"
         value="Continue"
-        (click)="save(firstForm.value)"
+        (click)="firstForm.submitted = true; save(firstForm.value)"
         [disabled]="firstForm.invalid"
       />
       <input type="hidden" name="submit_registration" value="Continue" />
+      <div *ngIf="firstForm.submitted" style="text-align: -webkit-center;">
+        <mat-spinner strokeWidth="3" [diameter]="30"></mat-spinner>
+      </div>
     </div>
   </form>
 

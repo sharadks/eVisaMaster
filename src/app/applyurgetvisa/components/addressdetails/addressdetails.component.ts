@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { UserService, ApiService, ApplicationService } from "../../../shared";
 import { environment } from "../../../../environments/environment";
 
@@ -9,12 +9,16 @@ import { environment } from "../../../../environments/environment";
   styleUrls: ['../../applyvisa.css']
 })
 export class AddressDetailsComponent implements OnInit {
+  temporary_id: string;
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private userService: UserService,
     private apiService: ApiService,
     private applicationService: ApplicationService
-  ) {}
+  ) { 
+    this.temporary_id = this.route.snapshot.queryParamMap.get('id');
+  }
 
   model = {
     pres_houseNo: '',
@@ -59,20 +63,22 @@ export class AddressDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  save(data){
-    const formattedData = this.applicationService.createRequestForStep3(data);
-    this.apiService
-      .post(`${environment.saveApplicationThirdPage}`, formattedData)
-      .subscribe(() => this.goToNext(), () => this.goToNext());
-      //remove goToNext method from error callback in future  
+  save(data) {
+    const apiId = { api_id: '3' };
+    this.apiService.post(`${environment.getSecreteData}`, apiId).subscribe((secretData) => {
+      const formattedData = this.applicationService.createRequestForStep3(data, secretData, apiId, this.temporary_id);
+      this.apiService
+        .post(`${environment.saveApplicationThirdPage}`, formattedData)
+        .subscribe((response) => this.goToNext(response && response.Action));
+    });
   }
 
-  saveAndExit(data){
+  saveAndExit(data) {
 
   }
 
-  goToNext (){
-    this.router.navigate(["applyvisa/visa"]);
+  goToNext(temporary_id) {
+    this.router.navigate(["applyvisa/visa"], {queryParams: {id: temporary_id}});
   }
 
 }

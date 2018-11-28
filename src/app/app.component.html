@@ -15,7 +15,7 @@ Completed<br> Form</a></li></ul>
      </div>
 	 <div class="clear"></div>
 	 <section>
-	 <layout-sidebar></layout-sidebar>
+	 <layout-sidebar *ngIf="removeSidebarforAllForms()"></layout-sidebar>
 	 <router-outlet></router-outlet>
 	 </section>
 	</section>

@@ -14,7 +14,7 @@ export class ApplicationComponent implements OnInit {
     private userService: UserService,
     private apiService: ApiService,
     private applicationService: ApplicationService
-  ) {}
+  ) { }
 
   firstForm = {
     applType: "",
@@ -26,28 +26,29 @@ export class ApplicationComponent implements OnInit {
     email_re: "",
     journeyDate: null,
     captcha: "",
-    eTouristvisa_service: false,
-    etouristValue: null,
-    eMedicalValue_service: false,
-    eMedicalValue: null,
-    eBusinessValue_service: false,
-    eBusinessValue: null,
-    eMedicalAttvisa_service: false,
-    eMedicalAttvisaValue: null
+    eVisaService: null,
+    eVisaServiceType: null,
+    submitted: false
   };
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$";
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   save(data) {
-    const formattedData = this.applicationService.createRequestForStep1(data);
-    this.apiService
-      .post(`${environment.saveApplicationFirstPage}`, formattedData)
-      .subscribe(() => this.goToNext(), () => this.goToNext());
-      //remove goToNext method from error callback in future  
+    const apiId = { api_id: 1 };
+    this.apiService.post(`${environment.getSecreteData}`, apiId).subscribe((secretData) => {
+      const formattedData = this.applicationService.createRequestForStep1(data, secretData, apiId);
+      this.apiService
+        .post(`${environment.saveApplicationFirstPage}`, formattedData)
+        .subscribe((response) => this.goToNext(response && response.Action),()=>{},()=>{this.firstForm.submitted = false;});
+    });
   }
 
-  private goToNext() {
-    this.router.navigate(["applyvisa/generaldetails"]);
+  private goToNext(temporary_id) {
+    this.router.navigate(["applyvisa/generaldetails"], {queryParams: {id: temporary_id}});
+  }
+
+  handleVisaServiceChange(e) {
+    this.firstForm.eVisaService = e.target.value; 
   }
 }

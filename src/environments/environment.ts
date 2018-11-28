@@ -5,12 +5,13 @@
 
 export const environment = {
     production: false,
-    api_url: 'https://conduit.productionready.io/api',
+    api_url: 'http://etouristapi.quickgst.in/api',
     off_report_path: '/reports/off-report',
     login_path: '/users/login',
     login_auth_path: '/users/user',
     saveApplicationFirstPage: '/Application/InsertFirstForm',
     saveApplicationSecondPage: '/Application/InsertSecondForm',
     saveApplicationThirdPage: '/Application/InsertThirdForm',
-    Getfromno : '/Application/Getfromno'
+    Getfromno : '/Application/Getfromno',
+    getSecreteData : '/Application/GetCredentials'
 };
