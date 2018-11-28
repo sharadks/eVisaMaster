@@ -9,24 +9,24 @@ Upload Photograph
 <div class="col-32">
 
 
-        <!-- <angular-file-uploader 
+        <angular-file-uploader 
         [config]="afuConfig"
         [resetUpload]=resetVar
         (ApiResponse)="DocUpload($event)">
-  </angular-file-uploader>  -->
-<input type="file" name="appl.image" value="" id="image_error_id">
+  </angular-file-uploader> 
+<!-- <input type="file" name="appl.image" value="" id="image_error_id"> -->
 
 
 </div>
 <div class="col-33"></div>
 </div> 
-<div class="row">
+<!-- <div class="row">
 <div class="col-11 text_center" style="background:transparent">
 <input name="submit_btn" type="submit" class="btn btn-primary" id="continue" value="Upload Photo">
 
 <input name="submit_btn" type="submit" class="btn btn-primary" id="exit" value="Exit" title="Exit">
 </div>                        
-</div>
+</div> -->
 <div class="row text_center" style="font-size:14px;color:#3873E0;font-weight: bold">
 <br>
 Temporary Application Id:-<span class="red_heading text_bold">112415013343KZL</span> <br>
@@ -53,7 +53,7 @@ close the window and Press Save and Exit . <br>You can complete your application
 
 
 
-    <div class="global-form form6">
+<div *ngIf="uploadCheck" class="global-form form6">
         <div class="pageHeading1 text_center">
 Upload Photograph
 <a href=""><img align="right" src="../../assets/images/home.png" style=" width: 30px; height:26px; margin-top:4px; margin-right:5px; "></a>

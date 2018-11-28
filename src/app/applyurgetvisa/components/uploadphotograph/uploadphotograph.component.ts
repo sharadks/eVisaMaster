@@ -9,6 +9,7 @@ import {UserService } from '../../../shared';
 })
 export class UploadPhotographComponent implements OnInit {
   public afuConfig;
+  private uploadCheck:boolean=true;
   constructor(
     private router: Router,
     private userService: UserService
@@ -17,7 +18,7 @@ export class UploadPhotographComponent implements OnInit {
   ngOnInit() {
     this.afuConfig = {
       uploadAPI: {
-        url:"https://example-file-upload-api"
+        url:""
       }
   };
   }
@@ -27,6 +28,7 @@ export class UploadPhotographComponent implements OnInit {
   }
   DocUpload(res){
     console.log("---------------", res);
+    this.uploadCheck=true;
   }
 
 }
