@@ -872,22 +872,29 @@
     <div class="row">
       <div class="col-1"></div>
       <div class="col-2">
-        <img
+        <!-- <img
           src="../../assets/images/captcha.png"
           id="capt"
           onload="image_loaded();"
           style="display: inline"
-        />
+        /> -->
+        <botdetect-captcha styleName=""></botdetect-captcha>
       </div>
       <div class="col-3">
-        <a
+        <!-- <a
           href=""
           onClick="return refreshCaptcha();"
           style="vertical-align: baseline"
           ><img
             src="../../assets/images/refresh.png"
             style="width:30px;height:30px;display: inline"
-        /></a>
+        /></a> -->
+        <!-- <div style="color:#A30B18"
+          class="error"
+          *ngIf="captchaCode.errors?.incorrectCaptcha && !captchaCode.pristine"
+          >
+          Incorrect captcha code.
+        </div> -->
       </div>
     </div>
 
@@ -902,12 +909,12 @@
       <div class="col-2">
         <input
           type="text"
-          name="captcha"
-          id="captcha"
+          name="captchaCode"
           maxlength="20"
           #captcha="ngModel"
-          [(ngModel)]="firstForm.captcha"
+          [(ngModel)]="captchaCode"
           required
+          correctCaptcha
         />
       </div>
       <div *ngIf="captcha.invalid && (captcha.dirty || captcha.touched)">

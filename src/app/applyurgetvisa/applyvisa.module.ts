@@ -12,6 +12,7 @@ import { VisaSoughtComponent } from './components/visasoughtdetails/visasoughdet
 import { SharedModule } from '../shared';
 import { FileUploadModule } from "angular-file-uploader";
 import { MatProgressSpinnerModule } from '@angular/material';
+import { BotDetectCaptchaModule } from 'angular-captcha';
 
 const applyVisaRouting: ModuleWithProviders = RouterModule.forChild([
     {
@@ -34,7 +35,10 @@ const applyVisaRouting: ModuleWithProviders = RouterModule.forChild([
         applyVisaRouting,
         SharedModule,
         FileUploadModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        BotDetectCaptchaModule.forRoot({
+            captchaEndpoint: 'BotDetectCaptcha.ashx'
+        })
     ],
     declarations: [
         ApplyVisaComponent,

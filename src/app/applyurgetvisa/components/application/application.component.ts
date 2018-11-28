@@ -1,7 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
 import { UserService, ApiService, ApplicationService } from "../../../shared";
 import { environment } from "../../../../environments/environment";
+import { CaptchaComponent } from 'angular-captcha';
 
 @Component({
   selector: "application-page",
@@ -9,6 +10,13 @@ import { environment } from "../../../../environments/environment";
   styleUrls: ["../../applyvisa.css"]
 })
 export class ApplicationComponent implements OnInit {
+  /**
+   * BotDetect CAPTCHA component.
+   */
+  @ViewChild(CaptchaComponent) captchaComponent: CaptchaComponent;
+
+  captchaCode: any;
+  
   constructor(
     private router: Router,
     private userService: UserService,
@@ -50,5 +58,29 @@ export class ApplicationComponent implements OnInit {
 
   handleVisaServiceChange(e) {
     this.firstForm.eVisaService = e.target.value; 
+  }
+
+  /**
+   * Validate captcha at server-side.
+   */
+  validate(value, valid): void {
+    if (!valid) {
+      return;
+    }
+
+    const postData = {
+      captchaCode: this.captchaComponent.captchaCode,
+      captchaId: this.captchaComponent.captchaId
+    }
+
+    this.apiService.post(`${environment.captchaValidationAPI}`, postData).subscribe((response) => {
+      if (response.json().success) {
+        // CAPTCHA validation passed at server-side
+      } else {
+        // CAPTCHA validation falied at client-side
+      }
+      // reload Captcha image
+      this.captchaComponent.reloadImage();
+    });
   }
 }
