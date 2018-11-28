@@ -13,5 +13,6 @@ export const environment = {
     saveApplicationSecondPage: '/Application/InsertSecondForm',
     saveApplicationThirdPage: '/Application/InsertThirdForm',
     Getfromno : '/Application/Getfromno',
-    getSecreteData : '/Application/GetCredentials'
+    getSecreteData : '/Application/GetCredentials',
+    captachSiteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
 };

@@ -12,6 +12,8 @@ import { VisaSoughtComponent } from './components/visasoughtdetails/visasoughdet
 import { SharedModule } from '../shared';
 import { FileUploadModule } from "angular-file-uploader";
 import { MatProgressSpinnerModule } from '@angular/material';
+import { RecaptchaModule } from 'ng-recaptcha';
+import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 
 const applyVisaRouting: ModuleWithProviders = RouterModule.forChild([
     {
@@ -34,7 +36,9 @@ const applyVisaRouting: ModuleWithProviders = RouterModule.forChild([
         applyVisaRouting,
         SharedModule,
         FileUploadModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        RecaptchaModule,
+        RecaptchaFormsModule
     ],
     declarations: [
         ApplyVisaComponent,

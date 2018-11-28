@@ -9,6 +9,8 @@ import { environment } from "../../../../environments/environment";
   styleUrls: ["../../applyvisa.css"]
 })
 export class ApplicationComponent implements OnInit {
+  captachSiteKey: string = environment.captachSiteKey;
+
   constructor(
     private router: Router,
     private userService: UserService,
@@ -51,4 +53,8 @@ export class ApplicationComponent implements OnInit {
   handleVisaServiceChange(e) {
     this.firstForm.eVisaService = e.target.value; 
   }
+
+  // resolved(captchaResponse: string) {
+  //   console.log(`Resolved captcha with response ${captchaResponse}:`);
+  // }
 }
