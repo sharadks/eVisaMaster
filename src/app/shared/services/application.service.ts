@@ -103,6 +103,12 @@ export class ApplicationService {
     };
   }
 
+  createRequestForStep4(data, secretData, apiId, temporary_id) {
+    return {
+      
+    }
+  }
+
   createRequestForcheckpartialy(data) {
     // format data as per backend requirement
     return {
